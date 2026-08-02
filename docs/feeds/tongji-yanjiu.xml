@@ -2,24 +2,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>统计研究—最新文章</title>
-    <link>https://tjyj.cbpt.cnki.net/</link>
+    <link>https://www.stats.gov.cn/zs/tjwh/tjkw/tjqk/</link>
     <description>统计研究官网文章更新（非官方RSS，由公开网页生成）</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 02 Aug 2026 06:22:45 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 07:42:42 +0000</lastBuildDate>
     <item>
       <title>中国经济景气月报</title>
       <link>https://www.stats.gov.cn/zs/tjwh/tjkw/tjqk/zgjjjq/</link>
       <description>期刊：统计研究&lt;br/&gt;等级：A3&lt;br/&gt;日期：2024-06-06&lt;br/&gt;中国经济景气月报 中国经济景气月报 中国经济景气月报 2024-06-06</description>
       <guid isPermaLink="false">tongji-yanjiu|中国经济景气月报|https://www.stats.gov.cn/zs/tjwh/tjkw/tjqk/zgjjjq</guid>
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>联合国开发署</title>
-      <link>http://www.undp.org/content/undp/en/home.html</link>
-      <description>期刊：统计研究&lt;br/&gt;等级：A3&lt;br/&gt;联合国 联合国经济和社会事务部 联合国统计司 世贸组织 粮农组织 劳工组织 基金组织 工发组织 教科文组织 世卫组织 世界银行 欧盟 经合组织 联合国开发署 联合国人口基金 联合国环境署 联合国儿童基金 世界粮食计划署 国际组织网站</description>
-      <guid isPermaLink="false">tongji-yanjiu|联合国开发署|http://www.undp.org/content/undp/en/home.html</guid>
     </item>
     <item>
       <title>国务院研究室</title>

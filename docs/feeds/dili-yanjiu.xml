@@ -7,21 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 02 Aug 2026 06:23:11 +0000</lastBuildDate>
-    <item>
-      <title>经济地理与区域高质量发展</title>
-      <link>https://www.dlyj.ac.cn/CN/current</link>
-      <description>期刊：地理研究&lt;br/&gt;等级：A3&lt;br/&gt;日期：2026-07-10&lt;br/&gt;2026年, 45卷, 第7期 刊出日期：2026-07-10 观点与争鸣 综述 生态环境效应分析 经济地理与区域高质量发展 乡村振兴 老龄化与健康地理 学术信息 封面文件 目录文件</description>
-      <guid isPermaLink="false">dili-yanjiu|经济地理与区域高质量发展|https://www.dlyj.ac.cn/CN/current</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>生态环境效应分析</title>
-      <link>https://www.dlyj.ac.cn/CN/current</link>
-      <description>期刊：地理研究&lt;br/&gt;等级：A3&lt;br/&gt;日期：2026-07-10&lt;br/&gt;2026年, 45卷, 第7期 刊出日期：2026-07-10 观点与争鸣 综述 生态环境效应分析 经济地理与区域高质量发展 乡村振兴 老龄化与健康地理 学术信息 封面文件 目录文件</description>
-      <guid isPermaLink="false">dili-yanjiu|生态环境效应分析|https://www.dlyj.ac.cn/CN/current</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Sun, 02 Aug 2026 07:43:18 +0000</lastBuildDate>
     <item>
       <title>青藏高原农业景观旅游功能的生成条件评判及可持续发展路径</title>
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250699</link>
@@ -123,12 +109,6 @@
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250039</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">dili-yanjiu|“一带一路”国家粮食贸易依赖网络演化及驱动机制|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250039</guid>
-    </item>
-    <item>
-      <title>E-mail Alert</title>
-      <link>https://www.dlyj.ac.cn/CN/alert/showAlertInfo.do</link>
-      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
-      <guid isPermaLink="false">dili-yanjiu|e-mailalert|https://www.dlyj.ac.cn/CN/alert/showAlertInfo.do</guid>
     </item>
   </channel>
 </rss>
