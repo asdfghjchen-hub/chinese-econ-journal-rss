@@ -1,9 +1,169 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>系统工程理论与实践—最新文章</title>
     <link>https://sysengi.cjoe.ac.cn/</link>
-    <description>首次联网运行后自动更新；当前为占位源。</description>
+    <description>系统工程理论与实践官网文章更新（非官方RSS，由公开网页生成）</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Sun, 02 Aug 2026 06:22:51 +0000</lastBuildDate>
+    <item>
+      <title>考虑用户响应度的V2G备用辅助服务交易协调契约设计</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-0941</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3&lt;br/&gt;日期：2026-08-02</description>
+      <guid isPermaLink="false">xitong-gongcheng|考虑用户响应度的v2g备用辅助服务交易协调契约设计|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-0941</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>面向碳中和的车网互动储能潜力及资源替代效益评估</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1628</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|面向碳中和的车网互动储能潜力及资源替代效益评估|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1628</guid>
+    </item>
+    <item>
+      <title>行业竞争如何影响CCUS部署?——基于源汇匹配模型的实证研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1620</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|行业竞争如何影响ccus部署?——基于源汇匹配模型的实证研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1620</guid>
+    </item>
+    <item>
+      <title>考虑非对称信息影响的虚拟电厂储能配置方案及优化调度策略研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1562</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|考虑非对称信息影响的虚拟电厂储能配置方案及优化调度策略研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1562</guid>
+    </item>
+    <item>
+      <title>考虑源荷耦合分布的产消者点对点电能交易与运行优化的博弈协同策略研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1312</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|考虑源荷耦合分布的产消者点对点电能交易与运行优化的博弈协同策略研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1312</guid>
+    </item>
+    <item>
+      <title>碳溢价驱动能源结构调整及经济低碳转型的机制与路径</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1517</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|碳溢价驱动能源结构调整及经济低碳转型的机制与路径|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1517</guid>
+    </item>
+    <item>
+      <title>碳交易制度的绿色低碳技术创新效应: 基于中国试点控排企业的微观实证</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1350</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|碳交易制度的绿色低碳技术创新效应:基于中国试点控排企业的微观实证|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1350</guid>
+    </item>
+    <item>
+      <title>电-碳-绿证市场协同联动对可再生能源电力发展的影响——多主体博弈视角</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1583</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|电-碳-绿证市场协同联动对可再生能源电力发展的影响——多主体博弈视角|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1583</guid>
+    </item>
+    <item>
+      <title>牵一发而动全身: 区域电力互联视角下系统性风险传染机制研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-0567</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|牵一发而动全身:区域电力互联视角下系统性风险传染机制研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-0567</guid>
+    </item>
+    <item>
+      <title>新型基础设施建设的减污降碳协同效应研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1330</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|新型基础设施建设的减污降碳协同效应研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1330</guid>
+    </item>
+    <item>
+      <title>我国省域电力系统转型风险综合测度及时空演化研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1578</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|我国省域电力系统转型风险综合测度及时空演化研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1578</guid>
+    </item>
+    <item>
+      <title>工业机器人应用如何推动低碳转型?——基于“双碳”战略下产业结构升级的视角</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1100</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|工业机器人应用如何推动低碳转型?——基于“双碳”战略下产业结构升级的视角|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1100</guid>
+    </item>
+    <item>
+      <title>外部冲击下产业转移的全球碳代价</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1550</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|外部冲击下产业转移的全球碳代价|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1550</guid>
+    </item>
+    <item>
+      <title>基于系统动力学的钢铁行业减污降碳协同治理路径研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1592</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|基于系统动力学的钢铁行业减污降碳协同治理路径研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1592</guid>
+    </item>
+    <item>
+      <title>基于文本分析的企业降碳与减污关注偏好及其影响研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1566</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|基于文本分析的企业降碳与减污关注偏好及其影响研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1566</guid>
+    </item>
+    <item>
+      <title>基于多元市场主体策略行为的电-碳-绿证市场耦合机制研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1533</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|基于多元市场主体策略行为的电-碳-绿证市场耦合机制研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1533</guid>
+    </item>
+    <item>
+      <title>基于多主体博弈的资源型城市群减排路径研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1606</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|基于多主体博弈的资源型城市群减排路径研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1606</guid>
+    </item>
+    <item>
+      <title>基于共享储能容量配置的风光储合作运行优化研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-2105</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|基于共享储能容量配置的风光储合作运行优化研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-2105</guid>
+    </item>
+    <item>
+      <title>制造业转移政策下供应商联盟策略研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1340</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|制造业转移政策下供应商联盟策略研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1340</guid>
+    </item>
+    <item>
+      <title>从观望到追随: 动态规范如何驱动异质企业绿色创新</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1600</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|从观望到追随:动态规范如何驱动异质企业绿色创新|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1600</guid>
+    </item>
+    <item>
+      <title>世代交叠视角下碳市场与环境税的效果评估与协同优化</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1518</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|世代交叠视角下碳市场与环境税的效果评估与协同优化|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1518</guid>
+    </item>
+    <item>
+      <title>“风光&lt;i&gt;+&lt;/i&gt;储”微电网机组组合的投建策略研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1553</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|“风光&lt;i&gt;+&lt;/i&gt;储”微电网机组组合的投建策略研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1553</guid>
+    </item>
+    <item>
+      <title>“碳配额+ CCER”双轮驱动的供应链链间价格竞争与链内碳减排技术投资合作策略研究</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1629</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|“碳配额+ccer”双轮驱动的供应链链间价格竞争与链内碳减排技术投资合作策略研究|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1629</guid>
+    </item>
+    <item>
+      <title>“碳”索共赢: 碳中和共性技术关联网络的结构特征与形成机制</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1709</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|“碳”索共赢:碳中和共性技术关联网络的结构特征与形成机制|https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2025-1709</guid>
+    </item>
+    <item>
+      <title>“支撑国家双碳战略的政策建模与策略”专辑序言</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/Y2026/V46/I7/1</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|“支撑国家双碳战略的政策建模与策略”专辑序言|https://sysengi.cjoe.ac.cn/CN/Y2026/V46/I7/1</guid>
+    </item>
+    <item>
+      <title>E-mail Alert</title>
+      <link>https://sysengi.cjoe.ac.cn/CN/alert/showAlertInfo.do</link>
+      <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">xitong-gongcheng|e-mailalert|https://sysengi.cjoe.ac.cn/CN/alert/showAlertInfo.do</guid>
+    </item>
   </channel>
 </rss>

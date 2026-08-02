@@ -1,9 +1,255 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>中国社会科学—最新文章</title>
     <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/</link>
-    <description>首次联网运行后自动更新；当前为占位源。</description>
+    <description>中国社会科学官网文章更新（非官方RSS，由公开网页生成）</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Sun, 02 Aug 2026 06:20:18 +0000</lastBuildDate>
+    <item>
+      <title>构建边疆传播新模式</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260729_6061284.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-10&lt;br/&gt;10 构建边疆传播新模式</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|构建边疆传播新模式|https://www.cssn.cn/skgz/bwyc/202607/t20260729_6061284.shtml</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>在交流互鉴中创新文艺理论</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260729_6061282.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-09&lt;br/&gt;9 在交流互鉴中创新文艺理论</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|在交流互鉴中创新文艺理论|https://www.cssn.cn/skgz/bwyc/202607/t20260729_6061282.shtml</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>我国古代酿酒技术再添新证</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260730_6061544.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-08&lt;br/&gt;8 我国古代酿酒技术再添新证</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|我国古代酿酒技术再添新证|https://www.cssn.cn/skgz/bwyc/202607/t20260730_6061544.shtml</guid>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>助力更高水平法治国家建设</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260730_6061541.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-07&lt;br/&gt;7 助力更高水平法治国家建设</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|助力更高水平法治国家建设|https://www.cssn.cn/skgz/bwyc/202607/t20260730_6061541.shtml</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>高质量党建引领高质量发展</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260730_6061540.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-06&lt;br/&gt;6 高质量党建引领高质量发展</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|高质量党建引领高质量发展|https://www.cssn.cn/skgz/bwyc/202607/t20260730_6061540.shtml</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>一块骨骼映射的文明脉络</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260731_6061716.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-05&lt;br/&gt;5 一块骨骼映射的文明脉络</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|一块骨骼映射的文明脉络|https://www.cssn.cn/skgz/bwyc/202607/t20260731_6061716.shtml</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>瑞金探寻老区融合发展新路径</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260731_6061715.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-04&lt;br/&gt;4 瑞金探寻老区融合发展新路径</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|瑞金探寻老区融合发展新路径|https://www.cssn.cn/skgz/bwyc/202607/t20260731_6061715.shtml</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>探析历代边疆治理 勇担边疆考古使命</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260731_6061843.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-03&lt;br/&gt;3 探析历代边疆治理 勇担边疆考古使命</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|探析历代边疆治理勇担边疆考古使命|https://www.cssn.cn/skgz/bwyc/202607/t20260731_6061843.shtml</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>第十届全国人文社会科学期刊论坛在兰州举行</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202608/t20260801_6061913.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;日期：2026-08-02&lt;br/&gt;2 第十届全国人文社会科学期刊论坛在兰</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|第十届全国人文社会科学期刊论坛在兰州举行|https://www.cssn.cn/skgz/bwyc/202608/t20260801_6061913.shtml</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>着力深化对中国当代经济发展的规律性认识</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260717_6059663.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;着力深化对中国当代经济发展的规律性认</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|着力深化对中国当代经济发展的规律性认识|https://www.cssn.cn/skgz/bwyc/202607/t20260717_6059663.shtml</guid>
+    </item>
+    <item>
+      <title>构建中国自主知识体系的哲学自觉</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260717_6059660.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;构建中国自主知识体系的哲学自觉 该书彰显了以主体性为核心、以原创性为追求，在哲学自觉中探索中国自主知识体系构建之路的理论品格。</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|构建中国自主知识体系的哲学自觉|https://www.cssn.cn/skgz/bwyc/202607/t20260717_6059660.shtml</guid>
+    </item>
+    <item>
+      <title>三重维度读懂制度优势</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260717_6059661.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;三重维度读懂制度优势 着力深化对中国当代经济发展的规律性认 一次同行同问同思的哲学邀请</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|三重维度读懂制度优势|https://www.cssn.cn/skgz/bwyc/202607/t20260717_6059661.shtml</guid>
+    </item>
+    <item>
+      <title>一次同行同问同思的哲学邀请</title>
+      <link>https://www.cssn.cn/skgz/bwyc/202607/t20260714_6059088.shtml</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|一次同行同问同思的哲学邀请|https://www.cssn.cn/skgz/bwyc/202607/t20260714_6059088.shtml</guid>
+    </item>
+    <item>
+      <title>《中国社会科学》</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;首页 &gt; 读刊·中国学派 &gt; 《中国社会科学》</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|《中国社会科学》|https://www.cssn.cn/dkzgxp/zgxp_zgshkx</guid>
+    </item>
+    <item>
+      <title>2026年第6期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202606/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2026年第6期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202606</guid>
+    </item>
+    <item>
+      <title>2026年第5期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202605/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2026年第5期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202605</guid>
+    </item>
+    <item>
+      <title>2026年第4期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202604/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2026年第4期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202604</guid>
+    </item>
+    <item>
+      <title>2026年第3期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202603/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2026年第3期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202603</guid>
+    </item>
+    <item>
+      <title>2026年第2期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202602/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2026年第2期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202602</guid>
+    </item>
+    <item>
+      <title>2026年第1期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202601/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2026年第1期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202601</guid>
+    </item>
+    <item>
+      <title>2025年第9期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshk2509/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第9期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshk2509</guid>
+    </item>
+    <item>
+      <title>2025年第8期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2508/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第8期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2508</guid>
+    </item>
+    <item>
+      <title>2025年第7期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2507/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第7期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2507</guid>
+    </item>
+    <item>
+      <title>2025年第6期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshkx2506/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第6期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshkx2506</guid>
+    </item>
+    <item>
+      <title>2025年第5期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2505/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第5期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2505</guid>
+    </item>
+    <item>
+      <title>2025年第4期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2504/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第4期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2504</guid>
+    </item>
+    <item>
+      <title>2025年第3期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2503/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第3期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2503</guid>
+    </item>
+    <item>
+      <title>2025年第2期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2502/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第2期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2502</guid>
+    </item>
+    <item>
+      <title>2025年第1期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202501/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第1期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk202501</guid>
+    </item>
+    <item>
+      <title>2025年第12期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgsk2512/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第12期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgsk2512</guid>
+    </item>
+    <item>
+      <title>2025年第11期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgsk2511/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第11期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgsk2511</guid>
+    </item>
+    <item>
+      <title>2025年第10期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2510/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2025年第10期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/sk2510</guid>
+    </item>
+    <item>
+      <title>2024年第9期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2409/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第9期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2409</guid>
+    </item>
+    <item>
+      <title>2024年第8期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2408/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第8期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2408</guid>
+    </item>
+    <item>
+      <title>2024年第7期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshkx2407/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第7期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshkx2407</guid>
+    </item>
+    <item>
+      <title>2024年第6期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshkx2406/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第6期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/zgshkx2406</guid>
+    </item>
+    <item>
+      <title>2024年第12期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2412/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第12期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2412</guid>
+    </item>
+    <item>
+      <title>2024年第11期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2411/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第11期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx2411</guid>
+    </item>
+    <item>
+      <title>2024年第10期</title>
+      <link>https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx202410/</link>
+      <description>期刊：中国社会科学&lt;br/&gt;等级：A1&lt;br/&gt;2026年第6期 2026年第5期 2026年第4期 2026年第3期 2026年第2期 2026年第1期 2025年第12期 2025年第11期 2025年第10期 2025年第9期 2025年第8期 2025年第7期 2025年第6期 2025年第5期 2025年第4期 2025年第3期 2025年第2期 2025年第1期 2024年第12期 2024年第11期 2024年第10期 2024年第9期 2024年第8期 2024年第7期 2024年第6期</description>
+      <guid isPermaLink="false">zhongguo-shehui-kexue|2024年第10期|https://www.cssn.cn/dkzgxp/zgxp_zgshkx/shkx202410</guid>
+    </item>
   </channel>
 </rss>
