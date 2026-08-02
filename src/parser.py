@@ -1,6 +1,6 @@
-\
 from __future__ import annotations
 
+import json
 import re
 from datetime import datetime
 from typing import Iterable, List, Optional
@@ -14,26 +14,85 @@ from .utils import clean_text, contains_any, normalize_url, parse_date
 
 
 NAV_TEXT = {
-    "首页", "上一页", "下一页", "更多", "更多>>", "更多 >",
-    "过刊", "过刊浏览", "当前期", "本期目录", "查看全部",
-    "登录", "注册", "投稿", "投稿系统", "期刊介绍",
+    "首页",
+    "上一页",
+    "下一页",
+    "更多",
+    "更多>>",
+    "更多 >",
+    "过刊",
+    "过刊浏览",
+    "当前期",
+    "本期目录",
+    "查看全部",
+    "登录",
+    "注册",
+    "投稿",
+    "投稿系统",
+    "期刊介绍",
 }
 
 ARTICLE_HINTS = (
-    "abstract", "article", "detail", "show", "content", "reader",
-    "magazine", "view", "doi", "dukan",
+    "abstract",
+    "article",
+    "detail",
+    "show",
+    "content",
+    "reader",
+    "view",
+    "doi",
+    "dukan",
 )
+
+STANDARD_FOLLOW_TEXT = (
+    "当前期",
+    "最新一期",
+    "本期目录",
+    "当期目录",
+    "最新目录",
+    "网络首发",
+    "优先出版",
+    "最新录用",
+    "待刊论文",
+)
+
+STANDARD_FOLLOW_URL = (
+    "/current",
+    "current.shtml",
+    "/issue/",
+    "/issues/",
+    "/magazine/show",
+    "/magazine/current",
+    "/contents/",
+    "/toc/",
+)
+
+BLOCKED_REDIRECT_HINTS = (
+    "quit.aspx",
+    "login.aspx",
+    "signin",
+)
+
+
+def is_blocked_redirect(url: str) -> bool:
+    lowered = url.lower()
+    return any(hint in lowered for hint in BLOCKED_REDIRECT_HINTS)
 
 
 def _same_or_subdomain(base_url: str, target_url: str) -> bool:
     base_host = urlparse(base_url).netloc.lower().removeprefix("www.")
     target_host = urlparse(target_url).netloc.lower().removeprefix("www.")
-    return target_host == base_host or target_host.endswith("." + base_host) or base_host.endswith("." + target_host)
+    return (
+        target_host == base_host
+        or target_host.endswith("." + base_host)
+        or base_host.endswith("." + target_host)
+    )
 
 
 def discover_feed_urls(html: str, base_url: str) -> List[str]:
     soup = BeautifulSoup(html, "lxml")
     found: List[str] = []
+
     for link in soup.select('link[rel~="alternate"][href]'):
         mime = (link.get("type") or "").lower()
         if "rss" in mime or "atom" in mime or "xml" in mime:
@@ -45,12 +104,96 @@ def discover_feed_urls(html: str, base_url: str) -> List[str]:
         if "rss" in href.lower() or text.upper() == "RSS":
             found.append(urljoin(base_url, href))
 
-    deduped = []
+    deduped: List[str] = []
     for url in found:
-        url = normalize_url(url)
-        if url not in deduped:
-            deduped.append(url)
+        normalized = normalize_url(url)
+        if normalized not in deduped:
+            deduped.append(normalized)
     return deduped
+
+
+def discover_candidate_pages(
+    html: str,
+    base_url: str,
+    journal: dict,
+    limit: int,
+) -> List[str]:
+    """
+    Discover current-issue, issue-directory, online-first, or accepted-paper pages.
+
+    This is especially useful for AJCASS sites and homepages that mix current
+    articles with historical recommendations.
+    """
+    soup = BeautifulSoup(html, "lxml")
+    follow_text = tuple(journal.get("follow_text_patterns", []))
+    follow_url = tuple(journal.get("follow_url_patterns", []))
+    scored: list[tuple[int, str]] = []
+
+    for anchor in soup.find_all("a", href=True):
+        text = clean_text(anchor.get("title") or anchor.get_text(" ", strip=True))
+        raw_href = clean_text(anchor.get("href", ""))
+        if not raw_href or raw_href.startswith(("javascript:", "mailto:", "tel:")):
+            continue
+
+        url = normalize_url(urljoin(base_url, raw_href))
+        if url == normalize_url(base_url):
+            continue
+        if not _same_or_subdomain(base_url, url):
+            continue
+
+        lowered_url = url.lower()
+        lowered_text = text.lower()
+        score = 0
+
+        if contains_any(text, STANDARD_FOLLOW_TEXT):
+            score += 8
+        if contains_any(lowered_url, STANDARD_FOLLOW_URL):
+            score += 6
+        if follow_text and contains_any(text, follow_text):
+            score += 10
+        if follow_url and contains_any(url, follow_url):
+            score += 10
+        if re.search(r"20\d{2}年第?\d{1,2}期", text):
+            score += 5
+        if "archive" in lowered_url or "过刊" in text:
+            score -= 3
+        if any(
+            lowered_url.endswith(ext)
+            for ext in (".pdf", ".jpg", ".jpeg", ".png", ".zip", ".rar")
+        ):
+            score = -100
+
+        if score >= 6:
+            scored.append((score, url))
+
+    # AJCASS pages sometimes expose issue URLs only inside script blocks.
+    script_text = "\n".join(script.get_text(" ", strip=True) for script in soup.find_all("script"))
+    script_patterns = list(follow_url) + [
+        r"/Magazine/[Ss]how[^\"'\s<]*",
+        r"/Magazine/[Cc]urrent[^\"'\s<]*",
+        r"/[Cc]urrent[^\"'\s<]*",
+    ]
+    for pattern in script_patterns:
+        if not pattern:
+            continue
+        try:
+            matches = re.findall(pattern, script_text, flags=re.I)
+        except re.error:
+            continue
+        for match in matches[:10]:
+            candidate = match[0] if isinstance(match, tuple) else match
+            url = normalize_url(urljoin(base_url, candidate))
+            if _same_or_subdomain(base_url, url):
+                scored.append((7, url))
+
+    scored.sort(key=lambda item: item[0], reverse=True)
+    result: List[str] = []
+    for _, url in scored:
+        if url not in result:
+            result.append(url)
+        if len(result) >= limit:
+            break
+    return result
 
 
 def parse_existing_feed(
@@ -61,6 +204,7 @@ def parse_existing_feed(
 ) -> List[Article]:
     parsed = feedparser.parse(raw)
     articles: List[Article] = []
+
     for entry in parsed.entries[:limit]:
         title = clean_text(entry.get("title", ""))
         link = normalize_url(entry.get("link", ""))
@@ -69,13 +213,18 @@ def parse_existing_feed(
 
         published = None
         for field in ("published", "updated", "created"):
-            if entry.get(field):
-                published = parse_date(str(entry[field]))
-                if published:
-                    break
+            if not entry.get(field):
+                continue
+            published = parse_date(str(entry[field]))
+            if published:
+                break
 
         author = clean_text(entry.get("author", ""))
-        summary = clean_text(BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True))
+        summary = clean_text(
+            BeautifulSoup(entry.get("summary", ""), "lxml").get_text(
+                " ", strip=True
+            )
+        )
         articles.append(
             Article(
                 journal_id=journal["id"],
@@ -89,6 +238,7 @@ def parse_existing_feed(
                 source_url=source_url,
             )
         )
+
     return articles
 
 
@@ -98,15 +248,19 @@ def _extract_context(anchor: Tag) -> tuple[str, Optional[datetime], str]:
         parent = container.parent
         if not isinstance(parent, Tag):
             break
+
         container = parent
         text = clean_text(container.get_text(" ", strip=True))
-        if 12 <= len(text) <= 1000:
+        if 12 <= len(text) <= 500:
             date = parse_date(text)
             author = ""
-            author_match = re.search(r"(?:作者|文\s*/)\s*[:：]?\s*([^|｜;；，,]{2,30})", text)
+            author_match = re.search(
+                r"(?:作者|文\s*/)\s*[:：]?\s*([^|｜;；，,]{2,40})", text
+            )
             if author_match:
                 author = clean_text(author_match.group(1))
             return text, date, author
+
     return "", None, ""
 
 
@@ -114,36 +268,131 @@ def _anchor_score(
     title: str,
     url: str,
     base_url: str,
-    include_patterns: Iterable[str],
-    exclude_patterns: Iterable[str],
+    article_patterns: Iterable[str],
+    exclude_text_patterns: Iterable[str],
+    exclude_url_patterns: Iterable[str],
     min_len: int,
     max_len: int,
 ) -> int:
     if not (min_len <= len(title) <= max_len):
         return -100
-    if title in NAV_TEXT or contains_any(title, exclude_patterns):
+    if title in NAV_TEXT or contains_any(title, exclude_text_patterns):
+        return -100
+    if contains_any(url, exclude_url_patterns):
         return -100
     if url.startswith(("javascript:", "mailto:", "tel:")):
         return -100
-    if url.lower().endswith((".jpg", ".jpeg", ".png", ".gif", ".zip", ".rar", ".doc", ".docx")):
+    if url.lower().endswith(
+        (".jpg", ".jpeg", ".png", ".gif", ".zip", ".rar", ".doc", ".docx")
+    ):
         return -100
 
     score = 0
     if _same_or_subdomain(base_url, url):
         score += 2
-    if contains_any(url, include_patterns):
-        score += 5
+    if article_patterns and contains_any(url, article_patterns):
+        score += 6
     if contains_any(url, ARTICLE_HINTS):
         score += 3
     if re.search(r"[\u4e00-\u9fff]", title):
         score += 2
-    if any(p in title for p in ("研究", "影响", "机制", "效应", "经济", "管理", "创新", "企业", "政策", "发展")):
+    if any(
+        token in title
+        for token in (
+            "研究",
+            "影响",
+            "机制",
+            "效应",
+            "经济",
+            "管理",
+            "创新",
+            "企业",
+            "政策",
+            "发展",
+            "治理",
+            "市场",
+        )
+    ):
         score += 1
-    if re.search(r"20\d{2}", title):
-        score -= 1
+    if re.search(r"20\d{2}年第?\d{1,2}期", title):
+        score -= 3
     if "pdf" in url.lower():
         score -= 1
+
     return score
+
+
+def _jsonld_articles(
+    soup: BeautifulSoup,
+    source_url: str,
+    journal: dict,
+) -> List[Article]:
+    result: List[Article] = []
+
+    def walk(value):
+        if isinstance(value, list):
+            for item in value:
+                yield from walk(item)
+        elif isinstance(value, dict):
+            if "@graph" in value:
+                yield from walk(value["@graph"])
+            yield value
+
+    for node in soup.select('script[type="application/ld+json"]'):
+        raw = node.string or node.get_text(" ", strip=True)
+        if not raw:
+            continue
+
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError:
+            continue
+
+        for item in walk(payload):
+            item_type = str(item.get("@type", "")).lower()
+            if item_type not in {
+                "article",
+                "scholarlyarticle",
+                "newsarticle",
+                "report",
+            }:
+                continue
+
+            title = clean_text(item.get("headline") or item.get("name") or "")
+            url = normalize_url(urljoin(source_url, item.get("url", "")))
+            if not title or not url:
+                continue
+
+            author_data = item.get("author", "")
+            if isinstance(author_data, list):
+                author = "、".join(
+                    clean_text(
+                        value.get("name", "") if isinstance(value, dict) else str(value)
+                    )
+                    for value in author_data
+                )
+            elif isinstance(author_data, dict):
+                author = clean_text(author_data.get("name", ""))
+            else:
+                author = clean_text(str(author_data))
+
+            result.append(
+                Article(
+                    journal_id=journal["id"],
+                    journal_name=journal["name"],
+                    tier=journal["tier"],
+                    title=title,
+                    url=url,
+                    author=author,
+                    published=parse_date(
+                        str(item.get("datePublished") or item.get("dateModified") or "")
+                    ),
+                    summary=clean_text(str(item.get("description", "")))[:800],
+                    source_url=source_url,
+                )
+            )
+
+    return result
 
 
 def parse_html_articles(
@@ -153,23 +402,42 @@ def parse_html_articles(
     settings: dict,
 ) -> List[Article]:
     soup = BeautifulSoup(html, "lxml")
-    include_patterns = journal.get("include_url_patterns", [])
-    exclude_patterns = journal.get("exclude_text_patterns", [])
+    article_patterns = journal.get(
+        "article_url_patterns", journal.get("include_url_patterns", [])
+    )
+    exclude_text_patterns = journal.get("exclude_text_patterns", [])
+    exclude_url_patterns = journal.get("exclude_url_patterns", [])
     selectors = journal.get("selectors", {})
+    max_items = journal.get(
+        "max_items_per_source", settings["max_items_per_source"]
+    )
+    min_score = journal.get("min_anchor_score", 6)
 
     candidates: List[Article] = []
+    candidates.extend(_jsonld_articles(soup, source_url, journal))
 
-    # Prefer explicit selectors when a site-specific rule is later added.
     if selectors.get("item") and selectors.get("title"):
         for item in soup.select(selectors["item"]):
             title_node = item.select_one(selectors["title"])
-            link_node = item.select_one(selectors.get("link", selectors["title"]))
+            link_selector = selectors.get("link", selectors["title"])
+            link_node = item.select_one(link_selector)
             if not title_node or not link_node or not link_node.get("href"):
                 continue
+
             title = clean_text(title_node.get_text(" ", strip=True))
             url = normalize_url(urljoin(source_url, link_node["href"]))
-            date_node = item.select_one(selectors.get("date", "")) if selectors.get("date") else None
-            author_node = item.select_one(selectors.get("author", "")) if selectors.get("author") else None
+
+            date_node = (
+                item.select_one(selectors["date"])
+                if selectors.get("date")
+                else None
+            )
+            author_node = (
+                item.select_one(selectors["author"])
+                if selectors.get("author")
+                else None
+            )
+
             candidates.append(
                 Article(
                     journal_id=journal["id"],
@@ -177,26 +445,39 @@ def parse_html_articles(
                     tier=journal["tier"],
                     title=title,
                     url=url,
-                    author=clean_text(author_node.get_text(" ", strip=True)) if author_node else "",
-                    published=parse_date(date_node.get_text(" ", strip=True)) if date_node else None,
+                    author=(
+                        clean_text(author_node.get_text(" ", strip=True))
+                        if author_node
+                        else ""
+                    ),
+                    published=(
+                        parse_date(date_node.get_text(" ", strip=True))
+                        if date_node
+                        else None
+                    ),
                     source_url=source_url,
                 )
             )
     else:
         for anchor in soup.find_all("a", href=True):
-            title = clean_text(anchor.get("title") or anchor.get_text(" ", strip=True))
+            title = clean_text(
+                anchor.get("title") or anchor.get_text(" ", strip=True)
+            )
             url = normalize_url(urljoin(source_url, anchor["href"]))
+
             score = _anchor_score(
                 title,
                 url,
                 source_url,
-                include_patterns,
-                exclude_patterns,
+                article_patterns,
+                exclude_text_patterns,
+                exclude_url_patterns,
                 settings["min_title_length"],
                 settings["max_title_length"],
             )
-            if score < 5:
+            if score < min_score:
                 continue
+
             context, date, author = _extract_context(anchor)
             candidates.append(
                 Article(
@@ -214,13 +495,22 @@ def parse_html_articles(
 
     deduped: dict[str, Article] = {}
     for article in candidates:
-        key = "".join(article.title.lower().split())
-        existing = deduped.get(key)
+        if not article.title or not article.url:
+            continue
+
+        title_key = "".join(article.title.lower().split())
+        existing = deduped.get(title_key)
         if existing is None:
-            deduped[key] = article
+            deduped[title_key] = article
         elif article.published and not existing.published:
-            deduped[key] = article
+            deduped[title_key] = article
 
     values = list(deduped.values())
-    values.sort(key=lambda a: (a.published or datetime.min, a.title), reverse=True)
-    return values[: settings["max_items_per_source"]]
+    values.sort(
+        key=lambda article: (
+            article.published or datetime.min,
+            article.title,
+        ),
+        reverse=True,
+    )
+    return values[:max_items]

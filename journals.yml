@@ -1,11 +1,15 @@
 settings:
-  user_agent: "Chinese-Econ-Journal-RSS/0.1 (+personal academic monitoring; low-frequency crawler)"
-  timeout_seconds: 35
-  max_items_per_source: 40
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+  timeout_seconds: 45
+  connect_timeout_seconds: 15
+  retry_total: 3
+  max_items_per_source: 50
   min_title_length: 6
-  max_title_length: 120
-  request_delay_seconds: 1.2
+  max_title_length: 140
+  request_delay_seconds: 1.5
+  candidate_page_limit: 4
   preserve_old_feed_on_failure: true
+  state_schema_version: 2
   output_dir: "docs/feeds"
   state_file: "data/state.json"
 
@@ -16,17 +20,25 @@ journals:
     homepage: "https://www.cssn.cn/dkzgxp/zgxp_zgshkx/"
     start_urls:
       - "https://www.cssn.cn/dkzgxp/zgxp_zgshkx/"
-    include_url_patterns: ["/zgxp_zgshkx/", "/2026"]
+    prefer_discovered_pages: false
+    article_url_patterns: ["/zgxp_zgshkx/"]
     exclude_text_patterns: ["订阅", "投稿", "联系我们", "上一页", "下一页"]
+    exclude_url_patterns: ["/index.shtml", "/tpxw/"]
+    max_items_per_source: 40
 
   - id: jingji-yanjiu
     name: "经济研究"
     tier: A1
+    platform: "ajcass"
     homepage: "https://erj.ajcass.com/"
     start_urls:
       - "https://erj.ajcass.com/"
-    include_url_patterns: ["/Magazine/", "/Article/", "Show", "show"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "当前期"]
+    follow_url_patterns: ["/Magazine/Show", "/Magazine/show", "/Magazine/Current"]
+    article_url_patterns: ["/Article/", "/article/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊介绍"]
+    exclude_url_patterns: ["/Login", "/Register", "/Author"]
 
   - id: guanli-shijie
     name: "管理世界"
@@ -34,9 +46,14 @@ journals:
     homepage: "http://www.mwm.net.cn/"
     start_urls:
       - "http://www.mwm.net.cn/"
-      - "https://glsj.chinajournal.net.cn/"
-    include_url_patterns: ["wkTextContent", "article", "Article", "detail"]
+      - "https://glsj.chinajournal.net.cn/WKB/WebPublication/index.aspx?mid=glsj"
+      - "https://glsj.chinajournal.net.cn/WKB/WebPublication/wkTextContent.aspx?mid=glsj"
+    prefer_discovered_pages: true
+    follow_text_patterns: ["本期目录", "最新一期", "过刊浏览"]
+    follow_url_patterns: ["WebPublication", "wkTextContent", "Issue"]
+    article_url_patterns: ["article", "Article", "detail", "Detail", "wkTextContent"]
     exclude_text_patterns: ["投稿", "登录", "注册", "版权"]
+    exclude_url_patterns: ["Quit.aspx", "Login.aspx", "EditorB2N"]
 
   - id: shijie-jingji
     name: "世界经济"
@@ -45,27 +62,41 @@ journals:
     start_urls:
       - "http://ejournaliwep.cssn.cn/qkjj/sjjj/"
       - "https://iwep.cssn.cn/cbw/cbw_xsqk/xsqk_sjjj/xsqk_sjjj_jj/"
-    include_url_patterns: ["/sjjj/", "content", "article"]
+    prefer_discovered_pages: false
+    article_url_patterns: ["/sjjj/", "content", "article"]
     exclude_text_patterns: ["期刊简介", "投稿", "联系我们"]
+    max_items_per_source: 30
 
   - id: jinrong-yanjiu
     name: "金融研究"
     tier: A2
-    homepage: "https://www.jryj.org.cn/CN/1002-7246/home.shtml"
+    homepage: "https://jryj.org.cn/CN/1002-7246/home.shtml"
     start_urls:
-      - "https://www.jryj.org.cn/CN/1002-7246/current.shtml"
-      - "https://www.jryj.org.cn/CN/1002-7246/home.shtml"
-    include_url_patterns: ["/CN/abstract/", "/CN/article/", "current.shtml"]
+      - "https://jryj.org.cn/CN/1002-7246/current.shtml"
+      - "https://jryj.org.cn/CN/1002-7246/home.shtml"
+      - "http://www.jryj.org.cn/CN/1002-7246/current.shtml"
+    prefer_discovered_pages: true
+    allow_insecure_ssl: true
+    follow_text_patterns: ["当前期", "最新一期", "本期目录"]
+    follow_url_patterns: ["/current", "current.shtml"]
+    article_url_patterns: ["/CN/abstract/", "/CN/article/", "/CN/10."]
     exclude_text_patterns: ["过刊浏览", "下载排行", "引用排行", "联系我们"]
+    exclude_url_patterns: ["/archive/", "/most_download"]
 
   - id: guanli-kexue-xuebao
     name: "管理科学学报"
     tier: A2
     homepage: "https://jmsc.tju.edu.cn/jmsc/home"
     start_urls:
+      - "https://jmsc.tju.edu.cn/jmsc/current"
       - "https://jmsc.tju.edu.cn/jmsc/home"
-    include_url_patterns: ["/jmsc/article/", "/article/", "detail"]
-    exclude_text_patterns: ["投稿", "登录", "注册", "期刊简介"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["当前期", "最新一期", "本期目录"]
+    follow_url_patterns: ["/jmsc/current", "/jmsc/issue", "/jmsc/volume"]
+    article_url_patterns: ["/jmsc/article/abstract/", "/jmsc/Article/abstract/"]
+    exclude_text_patterns: ["投稿", "登录", "注册", "期刊简介", "下载排行", "阅读排行"]
+    exclude_url_patterns: ["/archive/", "/most_read"]
+    max_items_per_source: 30
 
   - id: jingjixue-jikan
     name: "经济学（季刊）"
@@ -73,54 +104,84 @@ journals:
     homepage: "https://www.nsd.pku.edu.cn/cbw/jjxjk/index.htm"
     start_urls:
       - "https://www.nsd.pku.edu.cn/cbw/jjxjk/index.htm"
-    include_url_patterns: ["/cbw/jjxjk/", ".htm"]
-    exclude_text_patterns: ["期刊介绍", "投稿须知", "联系我们"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "待刊论文", "过刊目录"]
+    follow_url_patterns: ["/cbw/jjxjk/", "index", "list"]
+    article_url_patterns: ["/cbw/jjxjk/", ".htm"]
+    exclude_text_patterns: ["期刊介绍", "投稿须知", "联系我们", "编委会"]
+    max_items_per_source: 30
 
   - id: zhongguo-gongye-jingji
     name: "中国工业经济"
     tier: A3
+    platform: "ajcass"
     homepage: "https://ciejournal.ajcass.com/"
     start_urls:
       - "https://ciejournal.ajcass.com/"
-    include_url_patterns: ["/Magazine/", "/Article/", "Show", "show"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "当前期"]
+    follow_url_patterns: ["/Magazine/Show", "/Magazine/show", "/Magazine/Current"]
+    article_url_patterns: ["/Article/", "/article/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊介绍"]
+    exclude_url_patterns: ["/Login", "/Register", "/Author"]
 
   - id: shuliang-jingji
     name: "数量经济技术经济研究"
     tier: A3
-    homepage: "https://www.jqte.net/"
+    homepage: "https://www.jqte.net/sljjjsjjyj/ch/index.aspx"
     start_urls:
+      - "https://www.jqte.net/sljjjsjjyj/ch/index.aspx"
       - "https://www.jqte.net/"
-    include_url_patterns: ["/article/", "/CN/abstract/", "detail"]
+      - "http://www.jqte.net/sljjjsjjyj/ch/index.aspx"
+    prefer_discovered_pages: true
+    follow_text_patterns: ["当前期", "本期目录", "最新一期"]
+    follow_url_patterns: ["current", "issue", "reader"]
+    article_url_patterns: ["/reader/", "view_abstract", "/article/", "/CN/abstract/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "联系我们"]
+    max_items_per_source: 30
 
   - id: caimao-jingji
     name: "财贸经济"
     tier: A3
+    platform: "ajcass"
     homepage: "https://cmjj.ajcass.com/"
     start_urls:
       - "https://cmjj.ajcass.com/"
-    include_url_patterns: ["/Magazine/", "/Article/", "Show", "show"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "当前期"]
+    follow_url_patterns: ["/Magazine/Show", "/Magazine/show", "/Magazine/Current"]
+    article_url_patterns: ["/Article/", "/article/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊介绍"]
+    exclude_url_patterns: ["/Login", "/Register", "/Author"]
 
   - id: jingjixue-dongtai
     name: "经济学动态"
     tier: A3
+    platform: "ajcass"
     homepage: "https://jjxdt.ajcass.com/"
     start_urls:
       - "https://jjxdt.ajcass.com/"
-    include_url_patterns: ["/Magazine/", "/Article/", "Show", "show"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "当前期"]
+    follow_url_patterns: ["/Magazine/Show", "/Magazine/show", "/Magazine/Current"]
+    article_url_patterns: ["/Article/", "/article/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊介绍"]
+    exclude_url_patterns: ["/Login", "/Register", "/Author"]
 
   - id: tongji-yanjiu
     name: "统计研究"
     tier: A3
-    homepage: "https://tjyj.cbpt.cnki.net/"
+    homepage: "https://www.stats.gov.cn/zs/tjwh/tjkw/tjqk/"
     start_urls:
-      - "https://tjyj.cbpt.cnki.net/"
       - "https://www.stats.gov.cn/zs/tjwh/tjkw/tjqk/"
-    include_url_patterns: ["article", "Article", "detail", "Detail"]
+      - "https://tjyj.cbpt.cnki.net/WKB/WebPublication/index.aspx?mid=tjyj"
+    prefer_discovered_pages: true
+    follow_text_patterns: ["当前期", "本期目录", "最新一期"]
+    follow_url_patterns: ["WebPublication", "current", "Issue"]
+    article_url_patterns: ["article", "Article", "detail", "Detail", "/tjkw/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊简介"]
+    exclude_url_patterns: ["Quit.aspx", "Login.aspx", "EditorHN"]
+    max_items_per_source: 30
 
   - id: xitong-gongcheng
     name: "系统工程理论与实践"
@@ -129,8 +190,12 @@ journals:
     start_urls:
       - "https://sysengi.cjoe.ac.cn/CN/current"
       - "https://sysengi.cjoe.ac.cn/"
-    include_url_patterns: ["/CN/abstract/", "/CN/article/", "/CN/10."]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["当前期", "最新录用", "优先出版"]
+    follow_url_patterns: ["/CN/current", "/CN/accepted", "/CN/online"]
+    article_url_patterns: ["/CN/abstract/", "/CN/article/", "/CN/10."]
     exclude_text_patterns: ["过刊浏览", "下载排行", "引用排行", "联系我们"]
+    exclude_url_patterns: ["/archive/"]
 
   - id: zhongguo-guanli-kexue
     name: "中国管理科学"
@@ -139,8 +204,12 @@ journals:
     start_urls:
       - "https://www.zgglkx.com/CN/1003-207x/current.shtml"
       - "https://www.zgglkx.com/"
-    include_url_patterns: ["/CN/abstract/", "/CN/article/", "current.shtml"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["当前期", "最新录用", "优先出版"]
+    follow_url_patterns: ["/current", "current.shtml", "/accepted", "/online"]
+    article_url_patterns: ["/CN/abstract/", "/CN/article/", "/CN/10."]
     exclude_text_patterns: ["过刊浏览", "下载排行", "引用排行", "联系我们"]
+    exclude_url_patterns: ["/archive/"]
 
   - id: zhongguo-ruankexue
     name: "中国软科学"
@@ -148,17 +217,29 @@ journals:
     homepage: "https://www.cssm.com.cn/ch/"
     start_urls:
       - "https://www.cssm.com.cn/ch/"
-    include_url_patterns: ["/ch/reader/", "/article/", "view_abstract"]
+      - "http://www.cssm.com.cn/ch/"
+    prefer_discovered_pages: true
+    request_headers:
+      Referer: "https://www.cssm.com.cn/"
+    follow_text_patterns: ["当前期", "本期目录", "最新一期"]
+    follow_url_patterns: ["/ch/reader/", "current", "issue"]
+    article_url_patterns: ["/ch/reader/", "/article/", "view_abstract"]
     exclude_text_patterns: ["投稿", "登录", "注册", "联系我们"]
+    max_items_per_source: 30
 
   - id: zhongguo-nongcun-jingji
     name: "中国农村经济"
     tier: A3
+    platform: "ajcass"
     homepage: "https://zgncjj.ajcass.com/"
     start_urls:
       - "https://zgncjj.ajcass.com/"
-    include_url_patterns: ["/Magazine/", "/Article/", "Show", "show"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "当前期"]
+    follow_url_patterns: ["/Magazine/Show", "/Magazine/show", "/Magazine/Current"]
+    article_url_patterns: ["/Article/", "/article/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊介绍"]
+    exclude_url_patterns: ["/Login", "/Register", "/Author"]
 
   - id: dili-yanjiu
     name: "地理研究"
@@ -167,17 +248,26 @@ journals:
     start_urls:
       - "https://www.dlyj.ac.cn/CN/current"
       - "https://www.dlyj.ac.cn/"
-    include_url_patterns: ["/CN/abstract/", "/CN/article/", "/CN/10."]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["当前期", "最新录用", "优先出版"]
+    follow_url_patterns: ["/CN/current", "/CN/accepted", "/CN/online"]
+    article_url_patterns: ["/CN/abstract/", "/CN/article/", "/CN/10."]
     exclude_text_patterns: ["过刊浏览", "下载排行", "引用排行", "联系我们"]
+    exclude_url_patterns: ["/archive/"]
 
   - id: zhongguo-renkou-kexue
     name: "中国人口科学"
     tier: A3
+    platform: "ajcass"
     homepage: "https://zgrkkx.ajcass.com/"
     start_urls:
       - "https://zgrkkx.ajcass.com/"
-    include_url_patterns: ["/Magazine/", "/Article/", "Show", "show"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "当前期"]
+    follow_url_patterns: ["/Magazine/Show", "/Magazine/show", "/Magazine/Current"]
+    article_url_patterns: ["/Article/", "/article/"]
     exclude_text_patterns: ["投稿", "登录", "注册", "期刊介绍"]
+    exclude_url_patterns: ["/Login", "/Register", "/Author"]
 
   - id: qiushi
     name: "求是"
@@ -185,5 +275,10 @@ journals:
     homepage: "https://www.qstheory.cn/qs/mulu.htm"
     start_urls:
       - "https://www.qstheory.cn/qs/mulu.htm"
-    include_url_patterns: ["qstheory.cn/dukan/qs/", "/2026-"]
+    prefer_discovered_pages: true
+    follow_text_patterns: ["最新一期", "本期目录", "第1期", "第2期", "第3期", "第4期", "第5期", "第6期", "第7期", "第8期", "第9期", "第10期", "第11期", "第12期", "第13期", "第14期", "第15期", "第16期", "第17期", "第18期", "第19期", "第20期", "第21期", "第22期", "第23期", "第24期"]
+    follow_url_patterns: ["/dukan/qs/", "/qs/2026-", "/2026-"]
+    article_url_patterns: ["/dukan/qs/", "/qs/2026/", "/2026/"]
     exclude_text_patterns: ["往期", "订阅", "关于我们", "联系我们"]
+    exclude_url_patterns: ["/mulu.htm"]
+    max_items_per_source: 40
