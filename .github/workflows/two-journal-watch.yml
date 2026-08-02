@@ -1,0 +1,130 @@
+name: Watch Economic Research and Management World
+
+on:
+  schedule:
+    # Beijing time 09:10 and 21:10.
+    # Staggered 40 minutes after the 19-journal job.
+    - cron: "10 1,13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: journal-rss-repo-write
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Syntax and filter self-check
+        run: |
+          python -m py_compile src/two_journal_watch.py
+          python - <<'PY'
+          from src.two_journal_watch import (
+              issue_page_matches,
+              looks_like_article_title,
+              snapshot_hash,
+          )
+
+          assert looks_like_article_title(
+              "数字化转型如何影响企业创新——基于组织学习视角"
+          )
+          assert not looks_like_article_title("期刊编辑规程")
+          assert not looks_like_article_title("订户订购进口出版物管理办法")
+          assert issue_page_matches(
+              "《经济研究》2026年第6期目录",
+              "经济研究",
+              2026,
+              6,
+          )
+          assert snapshot_hash(
+              "<html><body>更新于 2026-08-02 12:30 正文</body></html>"
+          ) == snapshot_hash(
+              "<html><body>更新于 2026-08-03 13:45 正文</body></html>"
+          )
+          print("Focused watcher self-check passed")
+          PY
+
+      - name: Run focused watcher
+        run: python -m src.two_journal_watch
+
+      - name: Validate focused RSS
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          paths = [
+              Path("docs/feeds/economic-research-only.xml"),
+              Path("docs/feeds/management-world-only.xml"),
+              Path("docs/feeds/two-journals.xml"),
+          ]
+
+          for path in paths:
+              if not path.exists():
+                  raise SystemExit(f"Missing feed: {path}")
+              ET.parse(path)
+
+          print("Validated focused RSS files")
+          PY
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: two-journal-debug
+          path: debug/two-journals
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Commit and push with rebase
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "two-journal-rss-bot"
+          git config user.email "two-journal-rss-bot@users.noreply.github.com"
+
+          git add \
+            docs/feeds/economic-research-only.xml \
+            docs/feeds/management-world-only.xml \
+            docs/feeds/two-journals.xml \
+            docs/two-journal-report.md \
+            docs/two-journals.html \
+            data/two_journal_state.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update focused two-journal feeds"
+          fi
+
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+
+            git rebase --abort 2>/dev/null || true
+            echo "Push attempt ${attempt} failed; retrying..."
+            sleep $((attempt * 8))
+          done
+
+          echo "Failed to synchronize after 3 attempts."
+          exit 1
