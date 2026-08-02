@@ -4,7 +4,7 @@ import json
 import re
 from datetime import datetime
 from typing import Iterable, List, Optional
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import feedparser
 from bs4 import BeautifulSoup, Tag
@@ -31,6 +31,11 @@ NAV_TEXT = {
     "投稿系统",
     "期刊介绍",
 }
+
+ISSUE_TITLE_RE = re.compile(
+    r"^(?:第\s*\d+\s*期|20\d{2}\s*年\s*第?\s*\d+\s*期|"
+    r".*第\s*\d+\s*卷\s*第\s*\d+\s*期.*)$"
+)
 
 ARTICLE_HINTS = (
     "abstract",
@@ -61,8 +66,7 @@ STANDARD_FOLLOW_URL = (
     "current.shtml",
     "/issue/",
     "/issues/",
-    "/magazine/show",
-    "/magazine/current",
+    "/magazine/getissuecontentlist",
     "/contents/",
     "/toc/",
 )
@@ -112,6 +116,55 @@ def discover_feed_urls(html: str, base_url: str) -> List[str]:
     return deduped
 
 
+def _extract_candidate_period(url: str, text: str) -> tuple[int, int, int]:
+    """
+    Return a sortable (year, issue/month, day) tuple.
+
+    Supports:
+    - ?Year=2026&Issue=8
+    - /dukan/qs/2026-08/01/...
+    - text such as 2026年第8期
+    """
+    parsed = urlparse(url)
+    query = {key.lower(): value for key, value in parse_qs(parsed.query).items()}
+
+    year = 0
+    issue = 0
+    day = 0
+
+    if query.get("year"):
+        try:
+            year = int(query["year"][0])
+        except (ValueError, TypeError):
+            pass
+
+    if query.get("issue"):
+        try:
+            issue = int(query["issue"][0])
+        except (ValueError, TypeError):
+            pass
+
+    path_match = re.search(
+        r"/(20\d{2})[-/](\d{1,2})(?:[-/](\d{1,2}))?",
+        parsed.path,
+    )
+    if path_match:
+        year = max(year, int(path_match.group(1)))
+        issue = max(issue, int(path_match.group(2)))
+        if path_match.group(3):
+            day = int(path_match.group(3))
+
+    text_match = re.search(
+        r"(20\d{2})\s*年.*?第?\s*(\d{1,2})\s*期",
+        text,
+    )
+    if text_match:
+        year = max(year, int(text_match.group(1)))
+        issue = max(issue, int(text_match.group(2)))
+
+    return year, issue, day
+
+
 def discover_candidate_pages(
     html: str,
     base_url: str,
@@ -119,41 +172,49 @@ def discover_candidate_pages(
     limit: int,
 ) -> List[str]:
     """
-    Discover current-issue, issue-directory, online-first, or accepted-paper pages.
+    Discover issue/current/online-first pages and rank newest candidates first.
 
-    This is especially useful for AJCASS sites and homepages that mix current
-    articles with historical recommendations.
+    v3 distinguishes article pages from issue pages. In particular, AJCASS
+    `/Magazine/Show?id=...` links are individual articles; issue pages are
+    `/Magazine/GetIssueContentList?Year=...&Issue=...`.
     """
     soup = BeautifulSoup(html, "lxml")
     follow_text = tuple(journal.get("follow_text_patterns", []))
     follow_url = tuple(journal.get("follow_url_patterns", []))
-    scored: list[tuple[int, str]] = []
+    require_url = tuple(journal.get("candidate_url_require_patterns", []))
+    exclude_url = tuple(journal.get("candidate_url_exclude_patterns", []))
+    recent_years = journal.get("candidate_recent_years")
+    current_year = datetime.utcnow().year
 
-    for anchor in soup.find_all("a", href=True):
-        text = clean_text(anchor.get("title") or anchor.get_text(" ", strip=True))
-        raw_href = clean_text(anchor.get("href", ""))
-        if not raw_href or raw_href.startswith(("javascript:", "mailto:", "tel:")):
-            continue
+    scored: list[tuple[int, tuple[int, int, int], str]] = []
 
-        url = normalize_url(urljoin(base_url, raw_href))
-        if url == normalize_url(base_url):
-            continue
-        if not _same_or_subdomain(base_url, url):
-            continue
+    def consider(url: str, text: str, base_score: int = 0) -> None:
+        normalized = normalize_url(urljoin(base_url, url))
+        if normalized == normalize_url(base_url):
+            return
+        if not _same_or_subdomain(base_url, normalized):
+            return
+        if exclude_url and contains_any(normalized, exclude_url):
+            return
+        if require_url and not contains_any(normalized, require_url):
+            return
 
-        lowered_url = url.lower()
-        lowered_text = text.lower()
-        score = 0
+        period = _extract_candidate_period(normalized, text)
+        if recent_years is not None and period[0]:
+            if period[0] < current_year - int(recent_years):
+                return
 
+        lowered_url = normalized.lower()
+        score = base_score
         if contains_any(text, STANDARD_FOLLOW_TEXT):
             score += 8
         if contains_any(lowered_url, STANDARD_FOLLOW_URL):
-            score += 6
+            score += 7
         if follow_text and contains_any(text, follow_text):
             score += 10
-        if follow_url and contains_any(url, follow_url):
+        if follow_url and contains_any(normalized, follow_url):
             score += 10
-        if re.search(r"20\d{2}年第?\d{1,2}期", text):
+        if period[0]:
             score += 5
         if "archive" in lowered_url or "过刊" in text:
             score -= 3
@@ -161,39 +222,49 @@ def discover_candidate_pages(
             lowered_url.endswith(ext)
             for ext in (".pdf", ".jpg", ".jpeg", ".png", ".zip", ".rar")
         ):
-            score = -100
+            return
 
-        if score >= 6:
-            scored.append((score, url))
+        threshold = 4 if require_url else 6
+        if score >= threshold:
+            scored.append((score, period, normalized))
 
-    # AJCASS pages sometimes expose issue URLs only inside script blocks.
-    script_text = "\n".join(script.get_text(" ", strip=True) for script in soup.find_all("script"))
-    script_patterns = list(follow_url) + [
-        r"/Magazine/[Ss]how[^\"'\s<]*",
-        r"/Magazine/[Cc]urrent[^\"'\s<]*",
-        r"/[Cc]urrent[^\"'\s<]*",
-    ]
-    for pattern in script_patterns:
-        if not pattern:
+    for anchor in soup.find_all("a", href=True):
+        text = clean_text(anchor.get("title") or anchor.get_text(" ", strip=True))
+        href = clean_text(anchor.get("href", ""))
+        if not href or href.startswith(("javascript:", "mailto:", "tel:")):
             continue
+        consider(href, text)
+
+    # Some platforms place issue URLs inside scripts or data attributes.
+    script_text = "\n".join(
+        script.get_text(" ", strip=True)
+        for script in soup.find_all("script")
+    )
+    script_patterns = list(journal.get("candidate_script_regexes", []))
+    for pattern in script_patterns:
         try:
             matches = re.findall(pattern, script_text, flags=re.I)
         except re.error:
             continue
-        for match in matches[:10]:
+        for match in matches:
             candidate = match[0] if isinstance(match, tuple) else match
-            url = normalize_url(urljoin(base_url, candidate))
-            if _same_or_subdomain(base_url, url):
-                scored.append((7, url))
+            consider(candidate, "", base_score=8)
 
-    scored.sort(key=lambda item: item[0], reverse=True)
-    result: List[str] = []
-    for _, url in scored:
-        if url not in result:
-            result.append(url)
-        if len(result) >= limit:
-            break
-    return result
+    # Deduplicate while preserving the strongest/newest occurrence.
+    best: dict[str, tuple[int, tuple[int, int, int]]] = {}
+    for score, period, url in scored:
+        previous = best.get(url)
+        key = (score, period)
+        if previous is None or key > previous:
+            best[url] = key
+
+    # Recency dominates score once a candidate is otherwise admissible.
+    ordered = sorted(
+        ((score, period, url) for url, (score, period) in best.items()),
+        key=lambda item: (item[1], item[0]),
+        reverse=True,
+    )
+    return [url for _, _, url in ordered[:limit]]
 
 
 def parse_existing_feed(
@@ -255,7 +326,8 @@ def _extract_context(anchor: Tag) -> tuple[str, Optional[datetime], str]:
             date = parse_date(text)
             author = ""
             author_match = re.search(
-                r"(?:作者|文\s*/)\s*[:：]?\s*([^|｜;；，,]{2,40})", text
+                r"(?:作者|文\s*/)\s*[:：]?\s*([^|｜;；，,]{2,40})",
+                text,
             )
             if author_match:
                 author = clean_text(author_match.group(1))
@@ -273,10 +345,13 @@ def _anchor_score(
     exclude_url_patterns: Iterable[str],
     min_len: int,
     max_len: int,
+    allow_issue_titles: bool,
 ) -> int:
     if not (min_len <= len(title) <= max_len):
         return -100
     if title in NAV_TEXT or contains_any(title, exclude_text_patterns):
+        return -100
+    if not allow_issue_titles and ISSUE_TITLE_RE.match(title):
         return -100
     if contains_any(url, exclude_url_patterns):
         return -100
@@ -291,9 +366,9 @@ def _anchor_score(
     if _same_or_subdomain(base_url, url):
         score += 2
     if article_patterns and contains_any(url, article_patterns):
-        score += 6
+        score += 7
     if contains_any(url, ARTICLE_HINTS):
-        score += 3
+        score += 2
     if re.search(r"[\u4e00-\u9fff]", title):
         score += 2
     if any(
@@ -314,10 +389,8 @@ def _anchor_score(
         )
     ):
         score += 1
-    if re.search(r"20\d{2}年第?\d{1,2}期", title):
-        score -= 3
     if "pdf" in url.lower():
-        score -= 1
+        score += 1
 
     return score
 
@@ -367,7 +440,9 @@ def _jsonld_articles(
             if isinstance(author_data, list):
                 author = "、".join(
                     clean_text(
-                        value.get("name", "") if isinstance(value, dict) else str(value)
+                        value.get("name", "")
+                        if isinstance(value, dict)
+                        else str(value)
                     )
                     for value in author_data
                 )
@@ -385,7 +460,11 @@ def _jsonld_articles(
                     url=url,
                     author=author,
                     published=parse_date(
-                        str(item.get("datePublished") or item.get("dateModified") or "")
+                        str(
+                            item.get("datePublished")
+                            or item.get("dateModified")
+                            or ""
+                        )
                     ),
                     summary=clean_text(str(item.get("description", "")))[:800],
                     source_url=source_url,
@@ -393,6 +472,44 @@ def _jsonld_articles(
             )
 
     return result
+
+
+def _filter_latest_url_period(
+    articles: List[Article],
+    journal: dict,
+) -> List[Article]:
+    pattern = journal.get("latest_url_period_regex")
+    if not pattern or not articles:
+        return articles
+
+    try:
+        compiled = re.compile(pattern, re.I)
+    except re.error:
+        return articles
+
+    grouped: dict[str, List[Article]] = {}
+    unmatched: List[Article] = []
+
+    for article in articles:
+        match = compiled.search(article.url)
+        if not match:
+            unmatched.append(article)
+            continue
+
+        period = "".join(match.groups()) if match.groups() else match.group(0)
+        grouped.setdefault(period, []).append(article)
+
+    min_items = int(journal.get("latest_url_period_min_items", 3))
+    eligible = [
+        (period, values)
+        for period, values in grouped.items()
+        if len(values) >= min_items
+    ]
+    if not eligible:
+        return articles
+
+    latest_period, latest_articles = max(eligible, key=lambda item: item[0])
+    return latest_articles
 
 
 def parse_html_articles(
@@ -403,15 +520,18 @@ def parse_html_articles(
 ) -> List[Article]:
     soup = BeautifulSoup(html, "lxml")
     article_patterns = journal.get(
-        "article_url_patterns", journal.get("include_url_patterns", [])
+        "article_url_patterns",
+        journal.get("include_url_patterns", []),
     )
     exclude_text_patterns = journal.get("exclude_text_patterns", [])
     exclude_url_patterns = journal.get("exclude_url_patterns", [])
     selectors = journal.get("selectors", {})
     max_items = journal.get(
-        "max_items_per_source", settings["max_items_per_source"]
+        "max_items_per_source",
+        settings["max_items_per_source"],
     )
-    min_score = journal.get("min_anchor_score", 6)
+    min_score = journal.get("min_anchor_score", 7)
+    allow_issue_titles = bool(journal.get("allow_issue_titles", False))
 
     candidates: List[Article] = []
     candidates.extend(_jsonld_articles(soup, source_url, journal))
@@ -474,6 +594,7 @@ def parse_html_articles(
                 exclude_url_patterns,
                 settings["min_title_length"],
                 settings["max_title_length"],
+                allow_issue_titles,
             )
             if score < min_score:
                 continue
@@ -506,6 +627,7 @@ def parse_html_articles(
             deduped[title_key] = article
 
     values = list(deduped.values())
+    values = _filter_latest_url_period(values, journal)
     values.sort(
         key=lambda article: (
             article.published or datetime.min,

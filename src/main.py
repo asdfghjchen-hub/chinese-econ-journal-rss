@@ -26,7 +26,10 @@ def load_config(path: Path) -> dict:
         return yaml.safe_load(handle)
 
 
-def _request_options(journal: dict, referer: str | None = None) -> dict:
+def _request_options(
+    journal: dict,
+    referer: str | None = None,
+) -> dict:
     return {
         "verify_ssl": journal.get("verify_ssl", True),
         "allow_insecure_ssl": journal.get("allow_insecure_ssl", False),
@@ -54,6 +57,17 @@ def scrape_journal(
 ) -> tuple[List[Article], List[str]]:
     collected: List[Article] = []
     notes: List[str] = []
+
+    candidate_limit = int(
+        journal.get(
+            "candidate_page_limit",
+            settings.get("candidate_page_limit", 6),
+        )
+    )
+    min_candidate_items = int(journal.get("min_candidate_items", 1))
+    stop_after_first_success = bool(
+        journal.get("stop_after_first_candidate_success", False)
+    )
 
     for source_url in journal["start_urls"]:
         try:
@@ -110,13 +124,15 @@ def scrape_journal(
 
             if native_items:
                 collected.extend(native_items)
+                if journal.get("stop_after_first_source_success", False):
+                    break
                 continue
 
             candidate_urls = discover_candidate_pages(
                 page.text,
                 page.url,
                 journal,
-                settings.get("candidate_page_limit", 4),
+                candidate_limit,
             )
             if candidate_urls:
                 notes.append(
@@ -142,12 +158,22 @@ def scrape_journal(
                         journal,
                         settings,
                     )
-                    if current:
-                        candidate_items.extend(current)
+                    notes.append(
+                        f"目录页识别 {len(current)} 条: "
+                        f"{candidate_page.url}"
+                    )
+
+                    if len(current) < min_candidate_items:
                         notes.append(
-                            f"目录页识别 {len(current)} 条: "
-                            f"{candidate_page.url}"
+                            f"候选页条目不足（要求至少"
+                            f"{min_candidate_items}条），继续尝试"
                         )
+                        continue
+
+                    candidate_items.extend(current)
+                    if stop_after_first_success:
+                        notes.append("已采用首个合格的最新目录页")
+                        break
                 except Exception as exc:
                     notes.append(
                         f"候选页失败 {candidate_url}: "
@@ -157,6 +183,8 @@ def scrape_journal(
             candidate_items = _dedupe_articles(candidate_items)
             if candidate_items:
                 collected.extend(candidate_items)
+                if journal.get("stop_after_first_source_success", False):
+                    break
 
             should_parse_home = (
                 not candidate_items
@@ -173,6 +201,11 @@ def scrape_journal(
                 notes.append(
                     f"HTML识别 {len(home_items)} 条: {page.url}"
                 )
+                if (
+                    home_items
+                    and journal.get("stop_after_first_source_success", False)
+                ):
+                    break
 
         except Exception as exc:
             notes.append(
@@ -278,8 +311,6 @@ def upgrade_state_schema(
     if current_version >= target_version:
         return state, False
 
-    # v1 may contain homepage recommendations and dates parsed from issue IDs.
-    # Clear article buckets once, while retaining the previous run diagnostics.
     upgraded = {
         "schema_version": target_version,
         "articles": {},
@@ -314,7 +345,7 @@ def main() -> int:
     state = load_state(state_path)
     state, upgraded = upgrade_state_schema(
         state,
-        settings.get("state_schema_version", 2),
+        settings.get("state_schema_version", 3),
     )
     if upgraded:
         print("State schema upgraded; old article cache was cleared once.")
