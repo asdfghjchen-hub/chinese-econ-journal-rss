@@ -2,7 +2,7 @@
   "schema_version": 4,
   "journals": {
     "economic-research": {
-      "snapshot_hash": "16bd5724e765c202d9db016a371e89dced567115ce3fb16a3cf2206a1bc2f13c",
+      "snapshot_hash": "6ef0078848a2b70efb3a6be100f471174c26d1ba042e4e0274967813e706c900",
       "articles": {
         "economic-research|研究阐释宣传 党的二十大和二十届 历次全会精神|https://www.ncpssd.org/topics/details?id=1107&resourceType=203&wfColumn=1|": {
           "journal_id": "economic-research",
@@ -40,7 +40,7 @@
       }
     },
     "management-world": {
-      "snapshot_hash": "932b04b0973550494618af821773b183f97b5a0613068adfad659c648317c433",
+      "snapshot_hash": "e7620c427d8aced34eef8efb1e45c7a947a3e13379c59104541f1605531a5902",
       "articles": {
         "management-world|研究阐释宣传 党的二十大和二十届 历次全会精神|https://www.ncpssd.org/topics/details?id=1107&resourceType=203&wfColumn=1|": {
           "journal_id": "management-world",
