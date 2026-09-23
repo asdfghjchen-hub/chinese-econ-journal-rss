@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 22 Sep 2026 17:12:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 05:01:57 +0000</lastBuildDate>
     <item>
       <title>目标导向在线广告鲁棒分配问题</title>
       <link>https://www.zgglkx.com/CN/10.16381/j.cnki.issn1003-207x.2025.0735</link>
@@ -787,6 +787,12 @@
       <guid isPermaLink="false">dili-yanjiu|韩式饮食在青岛的地方化——兼论跨国移民对城市地方性的重构|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250350</guid>
     </item>
     <item>
+      <title>韩式饮食在青岛的地方化——兼论跨国移民对城市地方性的重构</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250350</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|韩式饮食在青岛的地方化——兼论跨国移民对城市地方性的重构|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250350</guid>
+    </item>
+    <item>
       <title>青藏高原农业景观旅游功能的生成条件评判及可持续发展路径</title>
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250699</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
@@ -803,6 +809,12 @@
       <link>https://cmjj.ajcass.com/UploadFile/SiteContent/FJList/djrux0wt.pdf</link>
       <description>期刊：财贸经济&lt;br/&gt;等级：A3&lt;br/&gt;审稿流程图 问与答（Q&amp;A） 发稿排版示例 编辑规范和体例要求 关于引用英文文献的说明 中文参考文献的格式规范 关于抵制学术不端的声明</description>
       <guid isPermaLink="false">caimao-jingji|问与答（q&amp;a）|https://cmjj.ajcass.com/UploadFile/SiteContent/FJList/djrux0wt.pdf</guid>
+    </item>
+    <item>
+      <title>长江经济带数字经济与城乡融合发展效率的时空格局及适配性评价</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250212</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|长江经济带数字经济与城乡融合发展效率的时空格局及适配性评价|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250212</guid>
     </item>
     <item>
       <title>长江经济带数字经济与城乡融合发展效率的时空格局及适配性评价</title>
@@ -919,10 +931,10 @@
       <guid isPermaLink="false">dili-yanjiu|重大海洋污染冲击下中国沿海城市经济韧性的时空分异与影响评估|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251085</guid>
     </item>
     <item>
-      <title>适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究</title>
-      <link>https://zgrkkx.ajcass.com/Magazine/Show/123304</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;· 适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究</description>
-      <guid isPermaLink="false">zhongguo-renkou-kexue|适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究|https://zgrkkx.ajcass.com/Magazine/Show/123304</guid>
+      <title>重大海洋污染冲击下中国沿海城市经济韧性的时空分异与影响评估</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251085</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|重大海洋污染冲击下中国沿海城市经济韧性的时空分异与影响评估|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251085</guid>
     </item>
     <item>
       <title>适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究</title>
@@ -931,15 +943,21 @@
       <guid isPermaLink="false">zhongguo-renkou-kexue|适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究|https://zgrkkx.ajcass.com/Magazine/Show/123304</guid>
     </item>
     <item>
-      <title>适老化改造的健康红利与照料...</title>
-      <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123304</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;适老化改造的健康红利与照料... (314)</description>
-      <guid isPermaLink="false">zhongguo-renkou-kexue|适老化改造的健康红利与照料...|https://zgrkkx.ajcass.com/Magazine/Show?id=123304</guid>
+      <title>适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究</title>
+      <link>https://zgrkkx.ajcass.com/Magazine/Show/123304</link>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;· 适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究</description>
+      <guid isPermaLink="false">zhongguo-renkou-kexue|适老化改造的健康红利与照料减负——基于“厕所革命”的实证研究|https://zgrkkx.ajcass.com/Magazine/Show/123304</guid>
     </item>
     <item>
       <title>适老化改造的健康红利与照料...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123304</link>
       <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;适老化改造的健康红利与照料... (317)</description>
+      <guid isPermaLink="false">zhongguo-renkou-kexue|适老化改造的健康红利与照料...|https://zgrkkx.ajcass.com/Magazine/Show?id=123304</guid>
+    </item>
+    <item>
+      <title>适老化改造的健康红利与照料...</title>
+      <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123304</link>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;适老化改造的健康红利与照料... (324)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|适老化改造的健康红利与照料...|https://zgrkkx.ajcass.com/Magazine/Show?id=123304</guid>
     </item>
     <item>
@@ -981,13 +999,13 @@
     <item>
       <title>认识中国区域人口增减分化：理论、经验和政策</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=120142</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;认识中国区域人口增减分化... (2612)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;认识中国区域人口增减分化... (2614)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|认识中国区域人口增减分化：理论、经验和政策|https://zgrkkx.ajcass.com/Magazine/Show?id=120142</guid>
     </item>
     <item>
       <title>认识中国区域人口增减分化：理论、经验和政策</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=120142</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;认识中国区域人口增减分化... (2614)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;认识中国区域人口增减分化... (2618)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|认识中国区域人口增减分化：理论、经验和政策|https://zgrkkx.ajcass.com/Magazine/Show?id=120142</guid>
     </item>
     <item>
@@ -1001,6 +1019,12 @@
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250866</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">dili-yanjiu|西藏西部曲龙遗址琼隆地点的年代学及人类活动历史分析|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250866</guid>
+    </item>
+    <item>
+      <title>若尔盖黄河唐克段MIS 3a阶段以来野火活动及环境变化</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250284</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|若尔盖黄河唐克段mis3a阶段以来野火活动及环境变化|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250284</guid>
     </item>
     <item>
       <title>若尔盖黄河唐克段MIS 3a阶段以来野火活动及环境变化</title>
@@ -1035,13 +1059,13 @@
     <item>
       <title>脱贫攻坚与乡村振兴战略的有效衔接——来自贵州省的调研</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=77159</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;脱贫攻坚与乡村振兴战略的... (23227)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;脱贫攻坚与乡村振兴战略的... (23228)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|脱贫攻坚与乡村振兴战略的有效衔接——来自贵州省的调研|https://zgrkkx.ajcass.com/Magazine/Show?id=77159</guid>
     </item>
     <item>
       <title>脱贫攻坚与乡村振兴战略的有效衔接——来自贵州省的调研</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=77159</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;脱贫攻坚与乡村振兴战略的... (23228)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;脱贫攻坚与乡村振兴战略的... (23233)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|脱贫攻坚与乡村振兴战略的有效衔接——来自贵州省的调研|https://zgrkkx.ajcass.com/Magazine/Show?id=77159</guid>
     </item>
     <item>
@@ -1065,7 +1089,7 @@
     <item>
       <title>职工基本养老保险全国统筹的实现路径与制度目标</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=82785</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;职工基本养老保险全国统筹... (22369)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;职工基本养老保险全国统筹... (22375)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|职工基本养老保险全国统筹的实现路径与制度目标|https://zgrkkx.ajcass.com/Magazine/Show?id=82785</guid>
     </item>
     <item>
@@ -1113,7 +1137,7 @@
     <item>
       <title>老年人年龄界定和重新界定的...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=32836</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;老年人年龄界定和重新界定的... (32823)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;老年人年龄界定和重新界定的... (32828)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|老年人年龄界定和重新界定的...|https://zgrkkx.ajcass.com/Magazine/Show?id=32836</guid>
     </item>
     <item>
@@ -1219,6 +1243,12 @@
       <guid isPermaLink="false">dili-yanjiu|租差理论视角下城市滨水区再开发的内在机制研究——以南京下关为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250478</guid>
     </item>
     <item>
+      <title>租差理论视角下城市滨水区再开发的内在机制研究——以南京下关为例</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250478</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|租差理论视角下城市滨水区再开发的内在机制研究——以南京下关为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250478</guid>
+    </item>
+    <item>
       <title>科技规划驱动企业自主创新能力提升的路径与效应</title>
       <link>https://ciejournal.ajcass.com/Magazine/Show?id=123363</link>
       <description>期刊：中国工业经济&lt;br/&gt;等级：A3&lt;br/&gt;科技规划驱动企业自主创新能力提升的路径与效应 郑世林，卢欣一，郭锡栋</description>
@@ -1257,13 +1287,13 @@
     <item>
       <title>疫情冲击下保企业稳产业促就业的思考与建议</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=75094</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;疫情冲击下保企业稳产业促... (23494)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;疫情冲击下保企业稳产业促... (23495)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|疫情冲击下保企业稳产业促就业的思考与建议|https://zgrkkx.ajcass.com/Magazine/Show?id=75094</guid>
     </item>
     <item>
       <title>疫情冲击下保企业稳产业促就业的思考与建议</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=75094</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;疫情冲击下保企业稳产业促... (23495)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;疫情冲击下保企业稳产业促... (23499)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|疫情冲击下保企业稳产业促就业的思考与建议|https://zgrkkx.ajcass.com/Magazine/Show?id=75094</guid>
     </item>
     <item>
@@ -1289,6 +1319,18 @@
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250411</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">dili-yanjiu|特大城市通勤韧性、距离与住宅成本空间均衡点分异研究：以北京市为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250411</guid>
+    </item>
+    <item>
+      <title>特大城市通勤韧性、距离与住宅成本空间均衡点分异研究：以北京市为例</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250411</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|特大城市通勤韧性、距离与住宅成本空间均衡点分异研究：以北京市为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250411</guid>
+    </item>
+    <item>
+      <title>焦点-分区统计：一种融合地理邻近和环境相似的空间统计方法</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250346</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|焦点-分区统计：一种融合地理邻近和环境相似的空间统计方法|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250346</guid>
     </item>
     <item>
       <title>焦点-分区统计：一种融合地理邻近和环境相似的空间统计方法</title>
@@ -1317,8 +1359,14 @@
     <item>
       <title>欧债危机下的养老金制度改革...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33943</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;欧债危机下的养老金制度改革... (31934)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;欧债危机下的养老金制度改革... (31937)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|欧债危机下的养老金制度改革...|https://zgrkkx.ajcass.com/Magazine/Show?id=33943</guid>
+    </item>
+    <item>
+      <title>概念迁徙视角下中国式乡村绅士化的内涵及其知识生产的迈向</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251206</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|概念迁徙视角下中国式乡村绅士化的内涵及其知识生产的迈向|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251206</guid>
     </item>
     <item>
       <title>概念迁徙视角下中国式乡村绅士化的内涵及其知识生产的迈向</title>
@@ -1329,13 +1377,13 @@
     <item>
       <title>构建新发展格局更好地促进就业</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=76837</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;构建新发展格局更好地促进... (23459)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;构建新发展格局更好地促进... (23461)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|构建新发展格局更好地促进就业|https://zgrkkx.ajcass.com/Magazine/Show?id=76837</guid>
     </item>
     <item>
       <title>构建新发展格局更好地促进就业</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=76837</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;构建新发展格局更好地促进... (23461)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;构建新发展格局更好地促进... (23468)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|构建新发展格局更好地促进就业|https://zgrkkx.ajcass.com/Magazine/Show?id=76837</guid>
     </item>
     <item>
@@ -1371,13 +1419,13 @@
     <item>
       <title>新时期劳动年龄人口就业状况——基于多状态就业生命表的分析</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=82786</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新时期劳动年龄人口就业状... (24374)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新时期劳动年龄人口就业状... (24375)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|新时期劳动年龄人口就业状况——基于多状态就业生命表的分析|https://zgrkkx.ajcass.com/Magazine/Show?id=82786</guid>
     </item>
     <item>
       <title>新时期劳动年龄人口就业状况——基于多状态就业生命表的分析</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=82786</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新时期劳动年龄人口就业状... (24375)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新时期劳动年龄人口就业状... (24382)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|新时期劳动年龄人口就业状况——基于多状态就业生命表的分析|https://zgrkkx.ajcass.com/Magazine/Show?id=82786</guid>
     </item>
     <item>
@@ -1395,13 +1443,13 @@
     <item>
       <title>新兴市场30国：综合发展水平测算与评估</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=78233</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新兴市场30国：综合发展水... (22900)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新兴市场30国：综合发展水... (22901)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|新兴市场30国：综合发展水平测算与评估|https://zgrkkx.ajcass.com/Magazine/Show?id=78233</guid>
     </item>
     <item>
       <title>新兴市场30国：综合发展水平测算与评估</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=78233</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新兴市场30国：综合发展水... (22901)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;新兴市场30国：综合发展水... (22906)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|新兴市场30国：综合发展水平测算与评估|https://zgrkkx.ajcass.com/Magazine/Show?id=78233</guid>
     </item>
     <item>
@@ -1485,7 +1533,7 @@
     <item>
       <title>数字经济赋能劳动生产率的收敛效应——基于人口红利转变的视角</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=87185</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;数字经济赋能劳动生产率的... (21562)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;数字经济赋能劳动生产率的... (21567)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|数字经济赋能劳动生产率的收敛效应——基于人口红利转变的视角|https://zgrkkx.ajcass.com/Magazine/Show?id=87185</guid>
     </item>
     <item>
@@ -1593,13 +1641,13 @@
     <item>
       <title>推进共同富裕：重点、难题与破解</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=79818</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;推进共同富裕：重点、难题... (22879)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;推进共同富裕：重点、难题... (22881)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|推进共同富裕：重点、难题与破解|https://zgrkkx.ajcass.com/Magazine/Show?id=79818</guid>
     </item>
     <item>
       <title>推进共同富裕：重点、难题与破解</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=79818</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;推进共同富裕：重点、难题... (22881)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;推进共同富裕：重点、难题... (22885)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|推进共同富裕：重点、难题与破解|https://zgrkkx.ajcass.com/Magazine/Show?id=79818</guid>
     </item>
     <item>
@@ -1617,13 +1665,13 @@
     <item>
       <title>技能培训券的稳就业效应——...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123302</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;技能培训券的稳就业效应——... (328)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;技能培训券的稳就业效应——... (332)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|技能培训券的稳就业效应——...|https://zgrkkx.ajcass.com/Magazine/Show?id=123302</guid>
     </item>
     <item>
       <title>技能培训券的稳就业效应——...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123302</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;技能培训券的稳就业效应——... (332)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;技能培训券的稳就业效应——... (340)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|技能培训券的稳就业效应——...|https://zgrkkx.ajcass.com/Magazine/Show?id=123302</guid>
     </item>
     <item>
@@ -1701,13 +1749,13 @@
     <item>
       <title>平台经济对就业结构的影响</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=83562</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;平台经济对就业结构的影响 (23804)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;平台经济对就业结构的影响 (23805)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|平台经济对就业结构的影响|https://zgrkkx.ajcass.com/Magazine/Show?id=83562</guid>
     </item>
     <item>
       <title>平台经济对就业结构的影响</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=83562</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;平台经济对就业结构的影响 (23805)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;平台经济对就业结构的影响 (23809)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|平台经济对就业结构的影响|https://zgrkkx.ajcass.com/Magazine/Show?id=83562</guid>
     </item>
     <item>
@@ -1761,13 +1809,13 @@
     <item>
       <title>就业质量类型的识别及心理健...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123303</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;就业质量类型的识别及心理健... (496)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;就业质量类型的识别及心理健... (501)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|就业质量类型的识别及心理健...|https://zgrkkx.ajcass.com/Magazine/Show?id=123303</guid>
     </item>
     <item>
       <title>就业质量类型的识别及心理健...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123303</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;就业质量类型的识别及心理健... (501)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;就业质量类型的识别及心理健... (507)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|就业质量类型的识别及心理健...|https://zgrkkx.ajcass.com/Magazine/Show?id=123303</guid>
     </item>
     <item>
@@ -1779,13 +1827,13 @@
     <item>
       <title>婴儿出生月份分布规律初探</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33509</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婴儿出生月份分布规律初探 (38371)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婴儿出生月份分布规律初探 (38373)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|婴儿出生月份分布规律初探|https://zgrkkx.ajcass.com/Magazine/Show?id=33509</guid>
     </item>
     <item>
       <title>婴儿出生月份分布规律初探</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33509</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婴儿出生月份分布规律初探 (38373)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婴儿出生月份分布规律初探 (38379)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|婴儿出生月份分布规律初探|https://zgrkkx.ajcass.com/Magazine/Show?id=33509</guid>
     </item>
     <item>
@@ -1803,13 +1851,13 @@
     <item>
       <title>婚姻教育匹配的生育效应研究...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123301</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婚姻教育匹配的生育效应研究... (396)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婚姻教育匹配的生育效应研究... (397)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|婚姻教育匹配的生育效应研究...|https://zgrkkx.ajcass.com/Magazine/Show?id=123301</guid>
     </item>
     <item>
       <title>婚姻教育匹配的生育效应研究...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=123301</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婚姻教育匹配的生育效应研究... (397)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;婚姻教育匹配的生育效应研究... (404)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|婚姻教育匹配的生育效应研究...|https://zgrkkx.ajcass.com/Magazine/Show?id=123301</guid>
     </item>
     <item>
@@ -1841,6 +1889,12 @@
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251139</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">dili-yanjiu|多维城市网络嵌入对专精特新“小巨人”企业培育的影响|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251139</guid>
+    </item>
+    <item>
+      <title>多类型视角下中国人口城镇化的空间分异特征与驱动机制</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250708</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|多类型视角下中国人口城镇化的空间分异特征与驱动机制|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250708</guid>
     </item>
     <item>
       <title>多类型视角下中国人口城镇化的空间分异特征与驱动机制</title>
@@ -1953,7 +2007,7 @@
     <item>
       <title>城市二元劳动力市场对农民工...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33949</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;城市二元劳动力市场对农民工... (31360)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;城市二元劳动力市场对农民工... (31363)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|城市二元劳动力市场对农民工...|https://zgrkkx.ajcass.com/Magazine/Show?id=33949</guid>
     </item>
     <item>
@@ -1965,13 +2019,13 @@
     <item>
       <title>城乡收入平衡性结构分析</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=76324</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;城乡收入平衡性结构分析 (23210)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;城乡收入平衡性结构分析 (23211)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|城乡收入平衡性结构分析|https://zgrkkx.ajcass.com/Magazine/Show?id=76324</guid>
     </item>
     <item>
       <title>城乡收入平衡性结构分析</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=76324</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;城乡收入平衡性结构分析 (23211)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;城乡收入平衡性结构分析 (23215)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|城乡收入平衡性结构分析|https://zgrkkx.ajcass.com/Magazine/Show?id=76324</guid>
     </item>
     <item>
@@ -1979,6 +2033,12 @@
       <link>http://www.jqte.net/sljjjsjjyj/ch/reader/view_abstract.aspx?file_no=20260801&amp;flag=1</link>
       <description>期刊：数量经济技术经济研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">shuliang-jingji|国家重大战略工程对接全国统一大市场建设的理论逻辑与实现路径|http://www.jqte.net/sljjjsjjyj/ch/reader/view_abstract.aspx?file_no=20260801&amp;flag=1</guid>
+    </item>
+    <item>
+      <title>国家地缘安全环境演变机制研究——以非洲大湖地区国家为例</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250015</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|国家地缘安全环境演变机制研究——以非洲大湖地区国家为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250015</guid>
     </item>
     <item>
       <title>国家地缘安全环境演变机制研究——以非洲大湖地区国家为例</title>
@@ -2005,6 +2065,12 @@
       <guid isPermaLink="false">dili-yanjiu|困在“虚实”空间之中：外卖平台经济的劳动时空控制机制|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250353</guid>
     </item>
     <item>
+      <title>困在“虚实”空间之中：外卖平台经济的劳动时空控制机制</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250353</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|困在“虚实”空间之中：外卖平台经济的劳动时空控制机制|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250353</guid>
+    </item>
+    <item>
       <title>哈尔滨市道外区城区婴儿死亡...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=32971</link>
       <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;哈尔滨市道外区城区婴儿死亡... (32281)</description>
@@ -2013,7 +2079,7 @@
     <item>
       <title>哈尔滨市道外区城区婴儿死亡...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=32971</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;哈尔滨市道外区城区婴儿死亡... (32281)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;哈尔滨市道外区城区婴儿死亡... (32286)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|哈尔滨市道外区城区婴儿死亡...|https://zgrkkx.ajcass.com/Magazine/Show?id=32971</guid>
     </item>
     <item>
@@ -2037,8 +2103,14 @@
     <item>
       <title>劳动力流动对城镇失业的影响...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33932</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;劳动力流动对城镇失业的影响... (32600)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;劳动力流动对城镇失业的影响... (32605)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|劳动力流动对城镇失业的影响...|https://zgrkkx.ajcass.com/Magazine/Show?id=33932</guid>
+    </item>
+    <item>
+      <title>制度嵌入与场景共生：存量时代工业遗产更新中文化势能的形成机制——以无锡市运河汇为例</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020260266</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|制度嵌入与场景共生：存量时代工业遗产更新中文化势能的形成机制——以无锡市运河汇为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020260266</guid>
     </item>
     <item>
       <title>制度嵌入与场景共生：存量时代工业遗产更新中文化势能的形成机制——以无锡市运河汇为例</title>
@@ -2067,20 +2139,14 @@
     <item>
       <title>再论教育对收入增长与分配的...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=32529</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;再论教育对收入增长与分配的... (30715)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;再论教育对收入增长与分配的... (30718)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|再论教育对收入增长与分配的...|https://zgrkkx.ajcass.com/Magazine/Show?id=32529</guid>
     </item>
     <item>
       <title>再论教育对收入增长与分配的...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=32529</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;再论教育对收入增长与分配的... (30718)</description>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;再论教育对收入增长与分配的... (30719)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|再论教育对收入增长与分配的...|https://zgrkkx.ajcass.com/Magazine/Show?id=32529</guid>
-    </item>
-    <item>
-      <title>共同富裕视角下的基本公共服务制度优化</title>
-      <link>https://zgrkkx.ajcass.com/Magazine/Show?id=81395</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;共同富裕视角下的基本公共... (23441)</description>
-      <guid isPermaLink="false">zhongguo-renkou-kexue|共同富裕视角下的基本公共服务制度优化|https://zgrkkx.ajcass.com/Magazine/Show?id=81395</guid>
     </item>
     <item>
       <title>共同富裕视角下的基本公共服务制度优化</title>
@@ -2089,15 +2155,21 @@
       <guid isPermaLink="false">zhongguo-renkou-kexue|共同富裕视角下的基本公共服务制度优化|https://zgrkkx.ajcass.com/Magazine/Show?id=81395</guid>
     </item>
     <item>
-      <title>六普结果表明以往人口估计和...</title>
-      <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33954</link>
-      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;六普结果表明以往人口估计和... (34059)</description>
-      <guid isPermaLink="false">zhongguo-renkou-kexue|六普结果表明以往人口估计和...|https://zgrkkx.ajcass.com/Magazine/Show?id=33954</guid>
+      <title>共同富裕视角下的基本公共服务制度优化</title>
+      <link>https://zgrkkx.ajcass.com/Magazine/Show?id=81395</link>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;共同富裕视角下的基本公共... (23448)</description>
+      <guid isPermaLink="false">zhongguo-renkou-kexue|共同富裕视角下的基本公共服务制度优化|https://zgrkkx.ajcass.com/Magazine/Show?id=81395</guid>
     </item>
     <item>
       <title>六普结果表明以往人口估计和...</title>
       <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33954</link>
       <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;六普结果表明以往人口估计和... (34060)</description>
+      <guid isPermaLink="false">zhongguo-renkou-kexue|六普结果表明以往人口估计和...|https://zgrkkx.ajcass.com/Magazine/Show?id=33954</guid>
+    </item>
+    <item>
+      <title>六普结果表明以往人口估计和...</title>
+      <link>https://zgrkkx.ajcass.com/Magazine/Show?id=33954</link>
+      <description>期刊：中国人口科学&lt;br/&gt;等级：A3&lt;br/&gt;六普结果表明以往人口估计和... (34064)</description>
       <guid isPermaLink="false">zhongguo-renkou-kexue|六普结果表明以往人口估计和...|https://zgrkkx.ajcass.com/Magazine/Show?id=33954</guid>
     </item>
     <item>
@@ -2149,6 +2221,18 @@
       <guid isPermaLink="false">dili-yanjiu|从居民舒适物到旅游吸引物：主客共享视角下的市井场景体验与空间文化意义|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251384</guid>
     </item>
     <item>
+      <title>从居民舒适物到旅游吸引物：主客共享视角下的市井场景体验与空间文化意义</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251384</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|从居民舒适物到旅游吸引物：主客共享视角下的市井场景体验与空间文化意义|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251384</guid>
+    </item>
+    <item>
+      <title>人本视角下工业遗产更新对居民地方依恋的影响——以郑州油化厂创意园为例</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251575</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|人本视角下工业遗产更新对居民地方依恋的影响——以郑州油化厂创意园为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251575</guid>
+    </item>
+    <item>
       <title>人本视角下工业遗产更新对居民地方依恋的影响——以郑州油化厂创意园为例</title>
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251575</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
@@ -2165,6 +2249,12 @@
       <link>http://www.jqte.net/sljjjsjjyj/ch/reader/issue_list.aspx</link>
       <description>期刊：数量经济技术经济研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">shuliang-jingji|京公网安备11010102006151号a&gt;|http://www.jqte.net/sljjjsjjyj/ch/reader/issue_list.aspx</guid>
+    </item>
+    <item>
+      <title>产权配置视角下城市历史街区更新的实现机制研究——以南京市为例</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250421</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|产权配置视角下城市历史街区更新的实现机制研究——以南京市为例|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250421</guid>
     </item>
     <item>
       <title>产权配置视角下城市历史街区更新的实现机制研究——以南京市为例</title>
@@ -2245,6 +2335,12 @@
       <guid isPermaLink="false">dili-yanjiu|中国历史牧草地重建进展与展望|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250328</guid>
     </item>
     <item>
+      <title>中国历史牧草地重建进展与展望</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020250328</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|中国历史牧草地重建进展与展望|https://www.dlyj.ac.cn/CN/10.11821/dlyj020250328</guid>
+    </item>
+    <item>
       <title>中国传统文化创新性发展的系统分析——基于政策文本分析的视角</title>
       <link>https://sysengi.cjoe.ac.cn/CN/10.12011/SETP2021-1499</link>
       <description>期刊：系统工程理论与实践&lt;br/&gt;等级：A3</description>
@@ -2261,6 +2357,12 @@
       <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020251610</link>
       <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
       <guid isPermaLink="false">dili-yanjiu|中国乡村文化遗产保护与活化研究进展：乡村振兴视角下的知识图谱与理论建构|https://www.dlyj.ac.cn/CN/10.11821/dlyj020251610</guid>
+    </item>
+    <item>
+      <title>中国A级景区运营效率测度及其空间分异特征</title>
+      <link>https://www.dlyj.ac.cn/CN/10.11821/dlyj020260063</link>
+      <description>期刊：地理研究&lt;br/&gt;等级：A3</description>
+      <guid isPermaLink="false">dili-yanjiu|中国a级景区运营效率测度及其空间分异特征|https://www.dlyj.ac.cn/CN/10.11821/dlyj020260063</guid>
     </item>
     <item>
       <title>中国A级景区运营效率测度及其空间分异特征</title>
