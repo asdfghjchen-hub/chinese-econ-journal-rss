@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2026 16:50:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 04:45:53 +0000</lastBuildDate>
     <item>
       <title>顾业还是顾家?——家族企业主的“工作-家庭”时间配置与企业绩效</title>
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260713</link>
@@ -43,6 +43,18 @@
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260814</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
       <guid isPermaLink="false">guanli-kexue-xuebao|证券信用交易中的投资者适当性管理研究——基于股市异常波动中异质投资者行为的分析|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260814</guid>
+    </item>
+    <item>
+      <title>证券信用交易中的投资者适当性管理研究——基于股市异常波动中异质投资者行为的分析</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260814</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|证券信用交易中的投资者适当性管理研究——基于股市异常波动中异质投资者行为的分析|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260814</guid>
+    </item>
+    <item>
+      <title>航运衍生品期限结构及其预测作用研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260807</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|航运衍生品期限结构及其预测作用研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260807</guid>
     </item>
     <item>
       <title>航运衍生品期限结构及其预测作用研究</title>
@@ -81,6 +93,12 @@
       <guid isPermaLink="false">guanli-kexue-xuebao|环境负面舆情能否提高地方环境治理效果——基于新浪微博大规模数据挖掘的实证研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260803</guid>
     </item>
     <item>
+      <title>环境负面舆情能否提高地方环境治理效果——基于新浪微博大规模数据挖掘的实证研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260803</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|环境负面舆情能否提高地方环境治理效果——基于新浪微博大规模数据挖掘的实证研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260803</guid>
+    </item>
+    <item>
       <title>环境、社会和治理(ESG):起源、实践及未来发展方向</title>
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260703</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
@@ -111,6 +129,18 @@
       <guid isPermaLink="false">guanli-kexue-xuebao|情绪共振与股市波动|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260813</guid>
     </item>
     <item>
+      <title>情绪共振与股市波动</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260813</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2&lt;br/&gt;情绪共振与股市波动 姚远，李艳，李方方，李田田 2026(8):188-206 [摘要] ( 0 ) [PDF 1.75 M] ( 0 ) 摘要： 基于相关性忽视理论，本研究探讨了新闻与投资者情绪共振对市场波动的影响.利用Finbert2对股吧评论和新闻文本进行情感分析，分别构建投资者情绪指数(IS)和新闻情绪指数(NS),借助马尔可夫区制转换向量自回归(MSVAR)模型刻画两类情绪共振过程，构建情绪共振指数(SRI).实证结果表明：SRI对上证综指已实现波动率具有显著的增量解释力，优于传统情绪指标；HAR-CatBoost-SRI混合模型更适合刻画情绪共振与市场波动之间的非线性关系；基于SHAP的机制检验发现，SRI的预测作用具有状态依赖性，前期高波动是其发挥作用的前提，恐慌情绪将放大其影响.本研究从情绪交互视角为相关性忽视理论提供量化证据，并为情绪共振风险的识别与预警提供工具.</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|情绪共振与股市波动|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260813</guid>
+    </item>
+    <item>
+      <title>广义门槛模型——基于机器学习方法</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260811</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|广义门槛模型——基于机器学习方法|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260811</guid>
+    </item>
+    <item>
       <title>广义门槛模型——基于机器学习方法</title>
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260811</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
@@ -121,6 +151,12 @@
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260705</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
       <guid isPermaLink="false">guanli-kexue-xuebao|平台间的非强制性独家协议竞争研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260705</guid>
+    </item>
+    <item>
+      <title>如何在追求“正外部性”的创新中获得高绩效?——基于“意义-能力”耦合组态的研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260804</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|如何在追求“正外部性”的创新中获得高绩效?——基于“意义-能力”耦合组态的研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260804</guid>
     </item>
     <item>
       <title>如何在追求“正外部性”的创新中获得高绩效?——基于“意义-能力”耦合组态的研究</title>
@@ -159,10 +195,22 @@
       <guid isPermaLink="false">guanli-kexue-xuebao|基于关联网络的机器人移动货架系统订单分批方法|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260809</guid>
     </item>
     <item>
+      <title>基于关联网络的机器人移动货架系统订单分批方法</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260809</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|基于关联网络的机器人移动货架系统订单分批方法|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260809</guid>
+    </item>
+    <item>
       <title>基于主体仿真的制造企业生产模式竞争与市场演化</title>
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260602</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
       <guid isPermaLink="false">guanli-kexue-xuebao|基于主体仿真的制造企业生产模式竞争与市场演化|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260602</guid>
+    </item>
+    <item>
+      <title>国有企业完善国民收入初次分配的作用机制——基于“结构效应”与“溢出效应”的研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260801</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|国有企业完善国民收入初次分配的作用机制——基于“结构效应”与“溢出效应”的研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260801</guid>
     </item>
     <item>
       <title>国有企业完善国民收入初次分配的作用机制——基于“结构效应”与“溢出效应”的研究</title>
@@ -177,6 +225,18 @@
       <guid isPermaLink="false">guanli-kexue-xuebao|商品期货资金流向预测力与监管成效——基于龙虎榜会员的证据|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260812</guid>
     </item>
     <item>
+      <title>商品期货资金流向预测力与监管成效——基于龙虎榜会员的证据</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260812</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|商品期货资金流向预测力与监管成效——基于龙虎榜会员的证据|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260812</guid>
+    </item>
+    <item>
+      <title>员工建言对领导纳谏的差异化影响研究——政治技能的调节作用</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260805</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|员工建言对领导纳谏的差异化影响研究——政治技能的调节作用|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260805</guid>
+    </item>
+    <item>
       <title>员工建言对领导纳谏的差异化影响研究——政治技能的调节作用</title>
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260805</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
@@ -189,10 +249,28 @@
       <guid isPermaLink="false">guanli-kexue-xuebao|分时电价对企业绿色电力消费策略的影响研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260810</guid>
     </item>
     <item>
+      <title>分时电价对企业绿色电力消费策略的影响研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260810</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|分时电价对企业绿色电力消费策略的影响研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260810</guid>
+    </item>
+    <item>
       <title>光伏扶贫与地区经济增长——基于中国722个贫困县的实证研究</title>
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260802</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
       <guid isPermaLink="false">guanli-kexue-xuebao|光伏扶贫与地区经济增长——基于中国722个贫困县的实证研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260802</guid>
+    </item>
+    <item>
+      <title>光伏扶贫与地区经济增长——基于中国722个贫困县的实证研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260802</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|光伏扶贫与地区经济增长——基于中国722个贫困县的实证研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260802</guid>
+    </item>
+    <item>
+      <title>供应链断裂风险下研发竞争与政府研发补贴</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260808</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|供应链断裂风险下研发竞争与政府研发补贴|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260808</guid>
     </item>
     <item>
       <title>供应链断裂风险下研发竞争与政府研发补贴</title>
@@ -229,6 +307,18 @@
       <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260815</link>
       <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
       <guid isPermaLink="false">guanli-kexue-xuebao|亡羊补牢，为时未晚?基于问询函的研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260815</guid>
+    </item>
+    <item>
+      <title>亡羊补牢，为时未晚?基于问询函的研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260815</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|亡羊补牢，为时未晚?基于问询函的研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260815</guid>
+    </item>
+    <item>
+      <title>乡村振兴背景下电商直播对农产品销售的影响——基于机器学习因果森林模型的实证研究</title>
+      <link>https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260806</link>
+      <description>期刊：管理科学学报&lt;br/&gt;等级：A2</description>
+      <guid isPermaLink="false">guanli-kexue-xuebao|乡村振兴背景下电商直播对农产品销售的影响——基于机器学习因果森林模型的实证研究|https://jmsc.tju.edu.cn/jmsc/jmsc/article/abstract/20260806</guid>
     </item>
     <item>
       <title>乡村振兴背景下电商直播对农产品销售的影响——基于机器学习因果森林模型的实证研究</title>
